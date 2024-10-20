@@ -1,12 +1,14 @@
 ---
 import ButtonContact from "./ButtonContact.astro";
 import JjugosLogo from "./JjugosLogo.astro";
+const navItems = [
+  { href: "./", text: "Inicio", class: "cs-li-link cs-active" },
+  { href: "./AboutUs", text: "Nosotros", class: "cs-li-link" },
+  { href: "./Product", text: "Producto", class: "cs-li-link" },
+  { href: "./Process", text: "Proceso", class: "cs-li-link" },
+  { href: "./Contact", text: "Contacto", class: "cs-li-link" }
+];
 ---
-
-<!-- ============================================ -->
-<!--                 Navigation                   -->
-<!-- ============================================ -->
-
 <header id="cs-navigation">
     <div class="cs-container">
         <!--Nav Logo-->
@@ -26,33 +28,15 @@ import JjugosLogo from "./JjugosLogo.astro";
             </button>
             <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
             <div class="cs-ul-wrapper">
-                <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
-                    <li class="cs-li">
-                        <a href="" class="cs-li-link cs-active">
-                            Inicio
-                        </a>
-                    </li>
-                    <li class="cs-li">
-                        <a href="" class="cs-li-link">
-                            Nosotros
-                        </a>
-                    </li>
-                    <li class="cs-li">
-                        <a href="" class="cs-li-link">
-                            Producto
-                        </a>
-                    </li>
-                    <li class="cs-li">
-                        <a href="" class="cs-li-link">
-                            Proceso
-                        </a>
-                    </li>
-                    <li class="cs-li">
-                        <a href="" class="cs-li-link">
-                            Contacto
-                        </a>
-                    </li>
-                </ul>
+              <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                {navItems.map(item => (
+                  <li class="cs-li">
+                    <a href={item.href} class={item.class}>
+                      {item.text}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
         </nav>
         <div class="cs-contact-group">
