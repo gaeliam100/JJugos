@@ -1,0 +1,84 @@
+---
+import JjugosLogo from "./JjugosLogo.astro";
+---
+
+<!-- ============================================ -->
+<!--                 Footer Grande                -->
+<!-- ============================================ -->
+
+<div class="container">
+    <div class="logo-section">
+        <JjugosLogo/>
+    </div>
+    <h1>En Natura Juice somos una familia comprometida con la calidad y la innovación.</h1>
+    <p>Trabajamos cada día para obtener lo mejor de la fruta y llevar hasta las mesas de cada familia, Jugos frescos naturales.</p>
+    <footer>
+        <p>Copyright © 2023 Natura Juice, Todos los Derechos Reservados.</p>
+        <p>Diseñado por Diseño Web Guadalajara</p>
+    </footer>
+    <a href="https://wa.me/1234567890" class="whatsapp-link">
+        <img src="whatsapp-icon.png" alt="WhatsApp">
+    </a>
+</div>
+
+    <style>
+        /* Estilos CSS */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f3f3f3;
+        }
+
+        .container {
+            background-color: #ff6a3e; 
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        .logo-section {
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            max-width: 7000px;
+            height: auto;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1rem;
+            margin: 0 0 15px 0;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+
+        .whatsapp-link {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: transparent;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-link:hover {
+            transform: scale(1.1);
+        }
+
+        .whatsapp-link img {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
