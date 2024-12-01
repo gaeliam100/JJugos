@@ -2,6 +2,7 @@
 import ViewTransitions from 'astro/components/ViewTransitions.astro';
 import Footer from '../components/Footer.astro';
 import Navbar from '../components/Navbar.astro';
+import FooterBasti from '../components/FooterBasti.astro';
 
 interface Props {
 	title: string;
@@ -24,16 +25,62 @@ const { title } = Astro.props;
 	<body>
 		<Navbar />
 		<slot />
-		<Footer/>
+		<FooterBasti />
 	</body>
 </html>
 <style is:global>
-	@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
 
-	*{
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-		font-family: "Roboto", system-ui;
-	}
+
+:root{
+    --accent: #CA555D;
+    --tenary: #8574EB;
+}
+
+body, html{
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    margin: 0px;
+    overflow-x: hidden;
+}
+.block{
+    display: block;
+}
+.h1-title, .h2-title{
+    font-weight: 700;
+}
+.h1-title{
+    font-size: 4.2rem;
+}
+.h2-title{
+    font-size: 3rem;
+}
+.h3-title{
+    font-size: 2.5rem;
+}
+
+.text-container{
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.center{
+    text-align: center;
+}
+
+.flex{
+    display: flex;
+}
+section.padded{
+    padding: 70px 0;
+}
+
+
+//@ Global mobile/tablet styling
+
+@media (max-width: 900px) {
+    .h1-title{
+        font-size: 3.2rem;
+    }
+}
 </style>
