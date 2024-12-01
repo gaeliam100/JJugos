@@ -20,6 +20,7 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
 		<title>{title}</title>
 		<ViewTransitions />
 	</head>
@@ -33,72 +34,79 @@ const { title } = Astro.props;
 <style is:global>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
 
-:root{
+:root {
     --accent: #CA555D;
     --tenary: #8574EB;
 }
 
-body, html{
+body, html {
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
     margin: 0px;
     overflow-x: hidden;
 }
-.block{
+
+.block {
     display: block;
 }
-.h1-title, .h2-title{
+
+.h1-title, .h2-title {
     font-weight: 700;
 }
-.h1-title{
+
+.h1-title {
     font-size: 4.2rem;
 }
-.h2-title{
+
+.h2-title {
     font-size: 3rem;
 }
-.h3-title{
+
+.h3-title {
     font-size: 2.5rem;
 }
 
-.text-container{
+.text-container {
     max-width: 500px;
     margin: 0 auto;
 }
 
-.center{
+.center {
     text-align: center;
 }
 
-.button{
+.button {
     border-radius: 40px;
     text-transform: none;
     font-weight: 500;
     font-size: 1.4rem;
-    &.button-primary{
-        background-color: var(--accent);
-        border-color: var(--accent);
-        &:hover{
-            background-color: var(--accent);
-            border-color: var(--accent);
-        }
-    }
-    &.lg{
-        height: 50px;
-        line-height: 48px;
-    }
 }
-.flex{
+
+.button.button-primary {
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+
+.button.button-primary:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+
+.button.lg {
+    height: 50px;
+    line-height: 48px;
+}
+
+.flex {
     display: flex;
 }
-section.padded{
+
+section.padded {
     padding: 70px 0;
 }
 
-
-//@ Global mobile/tablet styling
-
 @media (max-width: 900px) {
-    .h1-title{
+    .h1-title {
         font-size: 3.2rem;
     }
 }

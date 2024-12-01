@@ -3,33 +3,94 @@ import Showcase from '../assets/showcase-two.svg'
 
 ---
 
-
-<section class="bg-accent py-12">
-    <div class="container mx-auto">
-        <div class="flex flex-wrap">
-            <div class="w-full md:w-1/2 px-4">
-                <h3 class="text-4xl font-bold mb-4">Spark growth and engagement</h3>
-                <p class="text-lg mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-                <ol class="list-none pl-0 flex gap-x-2">
-                    <li class="relative pl-10 mb-4">
-                        <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-6 h-6 text-center border-2 border-black rounded-md font-bold">1</span>
-                        <a href="#" class="text-black no-underline text-center">Install extension</a>
-                    </li>
-                    <li class="relative pl-10 mb-4">
-                        <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-6 h-6 text-center border-2 border-black rounded-md font-bold">2</span>
-                        <a href="#" class="text-black no-underline text-center">Use any search filter</a>
-                    </li>
-                    <li class="relative pl-10 mb-4">
-                        <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-6 h-6 text-center border-2 border-black rounded-md font-bold">3</span>
-                        <a href="#" class="text-black no-underline text-center">Automate everything</a>
-                    </li>
+<section class="product-defined padded">
+    <div class="container">
+         <div class="row product-brief-items">
+            <div class="brief-tab one-half column">
+                <h3 class="h1-title">Spark growth and engagement</h3>
+                <p class="m-paragraph m-margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                <ol class="row">
+                    <li class="one-third column"><a href="#">Install extention</a></li>
+                    <li class="one-third column"><a href="#">Use any search filter</a></li>
+                    <li class="one-third column"><a href="#">Automate everything</a></li>
                 </ol>
             </div>
-            <div class="w-full md:w-1/2 px-4 flex justify-center items-center">
-                <img src="http://localhost:3000/src/assets/showcase-two.svg" alt="Showcase mockup" class="w-96">
+            <div class="brief-media center one-half column">
+                <img src={Showcase} alt="Showcase mockup">
             </div>
         </div>
     </div>
 </section>
 
 
+<style >
+.product-defined .brief-media img {
+    width: 400px;
+}
+
+@media (max-width: 700px) {
+    .product-defined .brief-media img {
+        width: 300px;
+    }
+}
+
+.product-defined .brief-tab {
+    padding-top: 50px;
+}
+
+.product-defined ol {
+    counter-reset: step;
+    align-items: center;
+    list-style: none;
+}
+
+.product-defined ol > li {
+    padding-left: 40px;
+    position: relative;
+}
+
+.product-defined ol > li::before {
+    counter-increment: step;
+    content: counter(step);
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -13px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.8em;
+    border: 2px solid #000;
+    font-weight: 700;
+    border-radius: 8px;
+}
+
+.product-defined ol > li a {
+    text-decoration: none;
+    color: #000;
+}
+
+@media (max-width: 900px) {
+    .product-defined ol {
+        gap: 0px;
+        flex-direction: column;
+    }
+
+    .product-defined ol .column {
+        width: 100%;
+        padding-left: 30px;
+        margin-left: 0;
+    }
+
+    .product-defined ol .column::before {
+        width: 18px;
+        height: 18px;
+        font-size: 10px;
+    }
+
+    .product-defined ol .column a {
+        font-size: 1.3rem;
+    }
+}
+</style>
