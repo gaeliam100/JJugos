@@ -7,38 +7,293 @@ import Footer from "../components/Footer.astro";
 import FooterBasti from "../components/FooterBasti.astro";
 import FinalCta from "../components/FinalCta.astro";
 import Certificado from "../components/Certificado.astro";
+import Features from "../components/Features.astro";
+import SubSection from "../components/SubSection.astro";
+import Products from "../components/Products.astro";
+import Slider from "../components/Slider.astro";
 
-const certificados=[{
-	title: "Certificado Kosher",
-	subtitle: "Contamos con el certificado Kosher, que garantiza que nuestros productos son aptos para el consumo de la comunidad judía.",
-	list:[
-		"Garantisamos la calidad.",
-		"seguridad alimentaria.",
-		"Productos de calidad.",
-	]
-},
-{
-	title: "Certificado FSSC 22000",
-	subtitle: "Contamos con el certificado FSSC 22000, que garantiza que nuestros productos cumplen con los estándares de calidad y seguridad alimentaria.",
-	list:[
-		"Garantisamos la calidad.",
-		"Seguridad alimentaria.",
-		"Productos de calidad.",
-	]
-}
-]
+const certificados = [
+  {
+    title: "Certificado Kosher",
+    subtitle:
+      "Contamos con el certificado Kosher, que garantiza que nuestros productos son aptos para el consumo de la comunidad judía.",
+    list: [
+      "Garantisamos la calidad.",
+      "seguridad alimentaria.",
+      "Productos de calidad.",
+    ],
+  },
+  {
+    title: "Certificado FSSC 22000",
+    subtitle:
+      "Contamos con el certificado FSSC 22000, que garantiza que nuestros productos cumplen con los estándares de calidad y seguridad alimentaria.",
+    list: [
+      "Garantisamos la calidad.",
+      "Seguridad alimentaria.",
+      "Productos de calidad.",
+    ],
+  },
+];
 ---
 
 <Layout title="JJUGOS">
-	<Hero />
-	{
-		certificados.map((certificado) => (
-			<Certificado 
-				title={certificado.title}
-				subtitle={certificado.subtitle}
-				list={certificado.list}
-			/>
-		))
-	}
-    <FinalCta />
+  <Hero />
+
+  <SubSection/>
+
+<Certificado
+title={certificados[0].title}
+subtitle={certificados[0].subtitle}
+list={certificados[0].list}
+/>
+<section
+class="container mx-auto px-4 py-20"
+>
+	<Features />
+
+</section>
+<Certificado
+title={certificados[1].title}
+subtitle={certificados[1].subtitle}
+list={certificados[1].list}
+/>
+
+  <Products />
+
+  <Slider />
+
+
+  <FinalCta />
 </Layout>
+
+<script type="module">
+  import gsap from '../node_modules/gsap/index.js';
+  import { ScrollTrigger } from '../node_modules/gsap/ScrollTrigger.js';
+  import { Flip } from '../node_modules/gsap/Flip.js';
+
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(Flip);
+
+  const preloaderBackground = document.querySelector('.preloader__background');
+
+  const preloaderText = document.querySelector('.preloader__text');
+
+  const master=gsap.timeline();
+
+  const setInitialStates=()=>{
+    gsap.set(preloaderText,{
+      yPercent:100
+    })
+  }
+
+  master.add(setInitialStates());
+
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    gsap.from('.fade-in', {
+      scrollTrigger: {
+        trigger: '.fade-in',
+        start: 'top 80%', // Inicia la animación cuando el elemento está en el 80% de la ventana
+        end: 'bottom 20%', // Termina la animación cuando el elemento está en el 20% de la ventana
+        toggleActions: 'play none none none', // Reproduce la animación al entrar, no hace nada al salir
+      },
+      opacity: 0,
+      y: 50,
+      duration: 1,
+    });
+    // Entrada desde la izquierda
+    gsap.from('.fade-in-left', {
+      scrollTrigger: {
+        trigger: '.fade-in-left',
+        start: 'top 80%',
+        end: 'bottom 20%',
+        toggleActions: 'play none none none',
+      },
+      opacity: 0,
+      x: -100,
+      duration: 1,
+    });
+
+    // Entrada desde la derecha
+    gsap.from('.fade-in-right', {
+      scrollTrigger: {
+        trigger: '.fade-in-right',
+        start: 'top 80%',
+        end: 'bottom 20%',
+        toggleActions: 'play none none none',
+      },
+      opacity: 0,
+      x: 100,
+      duration: 1,
+    });
+
+    // Entrada desde arriba
+    gsap.from('.fade-in-top', {
+      scrollTrigger: {
+        trigger: '.fade-in-top',
+        start: 'top 80%',
+        end: 'bottom 20%',
+        toggleActions: 'play none none none',
+      },
+      opacity: 0,
+      y: -100,
+      duration: 1,
+    });
+
+    // Entrada desde abajo
+    gsap.from('.fade-in-bottom', {
+      scrollTrigger: {
+        trigger: '.fade-in-bottom',
+        start: 'top 80%',
+        end: 'bottom 20%',
+        toggleActions: 'play none none none',
+      },
+      opacity: 0,
+      y: 100,
+      duration: 1,
+    });
+
+    // Entrada con escala
+    gsap.from('.fade-in-scale', {
+      scrollTrigger: {
+        trigger: '.fade-in-scale',
+        start: 'top 80%',
+        end: 'bottom 20%',
+        toggleActions: 'play none none none',
+      },
+      opacity: 0,
+      scale: 0.8,
+      duration: 1,
+    });
+
+        // Rotación desde la izquierda
+        gsap.from('.rotate-in-left', {
+      scrollTrigger: {
+        trigger: '.rotate-in-left',
+        start: 'top 80%',
+        end: 'bottom 20%',
+        toggleActions: 'play none none none',
+      },
+      opacity: 0,
+      x: -100,
+      rotation: -45,
+      duration: 1,
+    });
+
+    // Rotación desde la derecha
+    gsap.from('.rotate-in-right', {
+      scrollTrigger: {
+        trigger: '.rotate-in-right',
+        start: 'top 80%',
+        end: 'bottom 20%',
+        toggleActions: 'play none none none',
+      },
+      opacity: 0,
+      x: 100,
+      rotation: 45,
+      duration: 1,
+    });
+
+    // Rotación desde arriba
+    gsap.from('.rotate-in-top', {
+      scrollTrigger: {
+        trigger: '.rotate-in-top',
+        start: 'top 80%',
+        end: 'bottom 20%',
+        toggleActions: 'play none none none',
+      },
+      opacity: 0,
+      y: -100,
+      rotation: -45,
+      duration: 1,
+    });
+
+    // Rotación desde abajo
+    gsap.from('.rotate-in-bottom', {
+      scrollTrigger: {
+        trigger: '.rotate-in-bottom',
+        start: 'top 80%',
+        end: 'bottom 20%',
+        toggleActions: 'play none none none',
+      },
+      opacity: 0,
+      y: 100,
+      rotation: 45,
+      duration: 1,
+    });
+
+    // Entrada con rebote
+    gsap.from('.bounce-in', {
+      scrollTrigger: {
+        trigger: '.bounce-in',
+        start: 'top 80%',
+        end: 'bottom 20%',
+        toggleActions: 'play none none none',
+      },
+      opacity: 0,
+      y: 100,
+      ease: 'bounce.out',
+      duration: 1,
+    });
+        // Entrada desde la izquierda con deslizamiento
+        gsap.from('.slide-in-left', {
+      scrollTrigger: {
+        trigger: '.slide-in-left',
+        start: 'top 80%',
+        end: 'bottom 20%',
+        toggleActions: 'play none none none',
+      },
+      x: -100,
+      duration: 1,
+    });
+
+    // Entrada desde la derecha con deslizamiento
+    gsap.from('.slide-in-right', {
+      scrollTrigger: {
+        trigger: '.slide-in-right',
+        start: 'top 80%',
+        end: 'bottom 20%',
+        toggleActions: 'play none none none',
+      },
+      x: 100,
+      duration: 1,
+    });
+
+    // Entrada desde arriba con deslizamiento
+    gsap.from('.slide-in-top', {
+      scrollTrigger: {
+        trigger: '.slide-in-top',
+        start: 'top 80%',
+        end: 'bottom 20%',
+        toggleActions: 'play none none none',
+      },
+      y: -100,
+      duration: 1,
+    });
+
+    // Entrada desde abajo con deslizamiento
+    gsap.from('.slide-in-bottom', {
+      scrollTrigger: {
+        trigger: '.slide-in-bottom',
+        start: 'top 80%',
+        end: 'bottom 20%',
+        toggleActions: 'play none none none',
+      },
+      y: 100,
+      duration: 1,
+    });
+
+    // Entrada con giro
+    gsap.from('.spin-in', {
+      scrollTrigger: {
+        trigger: '.spin-in',
+        start: 'top 80%',
+        end: 'bottom 20%',
+        toggleActions: 'play none none none',
+      },
+      rotation: 360,
+      duration: 1,
+    });
+  });
+</script>

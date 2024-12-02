@@ -19,13 +19,14 @@ const { title, subtitle,list } = Astro.props;
                 <p class="m-paragraph m-margin">{subtitle}</p>
                 {list && (
                     <ol class="row">
-                        {list.map((item, index) => (
-                            <li class="one-third column" key={index}><a href="#">{item}</a></li>
+                        {list.map((item) => (
+                            <li class="one-third column" ><a href="#">{item}</a></li>
                         ))}
                     </ol>
                 )}
             </div>
-            <div class="brief-media center one-half column">
+            <div
+             class="brief-media center one-half column fade-in-right">
                 <img src="https://gentle-liger-f28974.netlify.app/_astro/showcase-two.58d8af01.svg" alt="Showcase mockup">
             </div>
         </div>

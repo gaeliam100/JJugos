@@ -12,11 +12,11 @@ import JjugosLogo from "./JjugosLogo.astro";
 <div class="hero__wrapper">
   <section class="hero">
     <div class="hero__image">
-      <img src="https://images.unsplash.com/photo-1528873981-36c6afde7b9d?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="N3 Bike" />
+      <img src="https://images.unsplash.com/photo-1457803097035-3ace37af34a7?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="N3 Bike" />
     </div>
     <div class="hero__content">
       <p class="hero__caption">
-       <JjugosLogo />
+          <img src="" alt="">
       </p>
       <h1 class="hero__title">
         <span>
@@ -33,29 +33,22 @@ import JjugosLogo from "./JjugosLogo.astro";
   </section>
 </div>
 
-<script type="module">
-  import gsap from '../node_modules/gsap/index.js';
-
-  import { Flip } from '../node_modules/gsap/Flip.js';
-
-  gsap.registerPlugin(Flip);
-
-  const preloaderBackground = document.querySelector('.preloader__background');
-
-  const preloaderText = document.querySelector('.preloader__text');
-
-  const master=gsap.timeline();
-
-  const setInitialStates=()=>{
-    gsap.set(preloaderText,{
-      yPercent:100
-    })
-  }
-
-  master.add(setInitialStates());
-</script>
 
 <style>
+  .button {
+	border: none;
+	background: black;
+	color: white;
+	padding: 12px 40px;
+	border-radius: 100px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.button--white {
+	background-color: white;
+	color: black;
+}
   .preloader {
 	overflow: hidden;
 	opacity: 0;
@@ -97,7 +90,7 @@ import JjugosLogo from "./JjugosLogo.astro";
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: #181818;
+	color: #fff;
 	text-align: center;
 	padding-inline: 24px;
 }
