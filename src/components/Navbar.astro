@@ -10,7 +10,9 @@ const navItems = [
 ];
 ---
 <header id="cs-navigation">
-    <div class="cs-container">
+    <div class="cs-container"
+    style="font-size:80%;"
+    >
         <!--Nav Logo-->
         <!--Logo is turned white in the css with a filter on dark mode-->
         <a href="" class="cs-logo" aria-label="back to home">
@@ -79,11 +81,8 @@ const navItems = [
   #cs-navigation {
     width: 94%;
     max-width: 80rem;
-    /* prevents padding from affecting height and width */
     box-sizing: border-box;
-    /* 12px - 24px */
     padding: clamp(0.75rem, 2vw, 1.5rem);
-    /* 12px - 24px */
     border-radius: clamp(0.75rem, 2vw, 1.5rem);
     position: fixed;
     top: 2rem;

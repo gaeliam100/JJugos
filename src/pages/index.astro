@@ -7,9 +7,38 @@ import Footer from "../components/Footer.astro";
 import FooterBasti from "../components/FooterBasti.astro";
 import FinalCta from "../components/FinalCta.astro";
 import Certificado from "../components/Certificado.astro";
+
+const certificados=[{
+	title: "Certificado Kosher",
+	subtitle: "Contamos con el certificado Kosher, que garantiza que nuestros productos son aptos para el consumo de la comunidad judía.",
+	list:[
+		"Garantisamos la calidad.",
+		"seguridad alimentaria.",
+		"Productos de calidad.",
+	]
+},
+{
+	title: "Certificado FSSC 22000",
+	subtitle: "Contamos con el certificado FSSC 22000, que garantiza que nuestros productos cumplen con los estándares de calidad y seguridad alimentaria.",
+	list:[
+		"Garantisamos la calidad.",
+		"Seguridad alimentaria.",
+		"Productos de calidad.",
+	]
+}
+]
 ---
 
 <Layout title="JJUGOS">
+	<Hero />
+	{
+		certificados.map((certificado) => (
+			<Certificado 
+				title={certificado.title}
+				subtitle={certificado.subtitle}
+				list={certificado.list}
+			/>
+		))
+	}
     <FinalCta />
-    <Certificado />
 </Layout>
