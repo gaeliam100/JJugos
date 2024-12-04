@@ -2,11 +2,41 @@
 import Layout from '../layouts/Layout.astro';
 import Proceso from '../components/Proceso.astro';
 import PasosProcess from '../components/PasosProcess.astro';
+import Numero1 from '../components/Numero1.astro';
+
+const pasos=[{
+    nombre:"HUERTAS",
+    icono:"icon",
+    imagen:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLAMhuJhyoA4dBDuh9VQXFzXVHByrGgK-VeA&s",
+    texto:"lorem"
+},
+{
+    nombre:"fos",
+    icono:"as",
+    imagen:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLAMhuJhyoA4dBDuh9VQXFzXVHByrGgK-VeA&s",
+    texto:"s"
+}
+]
 ---
 
 <Layout title="JJUGOS">
     <Proceso/>
-    <PasosProcess/>
+    {
+        pasos.map((r,index)=>{
+                return(
+                    <PasosProcess
+                    nombre={r.nombre}
+                    imagen={r.imagen}
+                    texto={r.texto}
+                    icono={r.icono}
+                    esPar={index%2==0}
+                    />
+                )
+
+        }
+            
+        )
+    }
 </Layout>
 
 

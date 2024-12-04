@@ -1,5 +1,14 @@
 ---
-import Num1 from "../components/Numero1.astro";
+
+interface Props{
+  nombre:string,
+  icono:any,
+  imagen:string,
+  texto:string,
+  esPar?:boolean
+}
+
+const {nombre, icono, imagen, texto,esPar}=Astro.props
 ---
 
 
@@ -7,13 +16,20 @@ import Num1 from "../components/Numero1.astro";
     <div class="container mx-auto px-6 py-12 bg-white rounded-lg shadow-md">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <!-- Imagen con botón de zoom -->
-        <div class="relative group">
-          <img 
-            src="https://www.starjuice.com.mx/assets/images/proceso3.jpg" 
+         {
+          esPar &&(
+          <div class="relative group ">
+          {
+            <img 
+            src={imagen}
             alt="Huertas" 
             class="w-full rounded-lg object-cover"
           />
+          }
         </div>
+          )
+         }
+
         <!-- Contenido textual -->
         <div class="text-left">
           <!-- Número grande -->
@@ -22,12 +38,19 @@ import Num1 from "../components/Numero1.astro";
           </div>
           <!-- Título -->
           <h2 class="text-[#ff6a3e] font-bold text-[60px] flex items-center gap-2">
+<<<<<<< HEAD
             <span class="inline-flex "><Num1 /></span>
             Iván está bien buena
+=======
+            <span class="inline-flex ">
+              {icono}
+            </span>
+            {nombre}
+>>>>>>> 5b4ee5d (leraning)
           </h2>
           <!-- Descripción -->
           <p class="text-gray-600 text-[30px]">
-            Su cultivación es en base a procedimientos y técnicas de agricultura orgánica.
+           {texto}
           </p>
           <!-- Íconos de árboles -->
           <div class="flex gap-8 mt-6">
@@ -36,6 +59,20 @@ import Num1 from "../components/Numero1.astro";
             <img src="/public/arbol.png" alt="Árbol 3" class="w-12 h-12" />
           </div>
         </div>
+        {
+          !esPar &&(
+          <div class="relative group ">
+          {
+            <img 
+            src={imagen}
+            alt="Huertas" 
+            class="w-full rounded-lg object-cover"
+          />
+          }
+        </div>
+          )
+         }
+
       </div>
     </div>
   </div>  
