@@ -7,7 +7,7 @@ interface Props {
   esPar?: boolean; // Para determinar si el diseño alterna
 }
 
-const { nombre, icono, imagen, texto, esPar } = Astro.props;
+const { nombre, imagen, texto, icono: Icono, esPar } = Astro.props;
 ---
 
 <div class="bg-[#ff6a3e] py-12">
@@ -29,7 +29,7 @@ const { nombre, icono, imagen, texto, esPar } = Astro.props;
         </div>
         <h2 class="text-[#ff6a3e] font-bold text-[60px] flex items-center gap-2">
           <span class="inline-flex">
-            {icono}
+            <Icono />
           </span>
           {nombre}
         </h2>
