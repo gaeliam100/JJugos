@@ -1,78 +1,58 @@
 ---
-
-interface Props{
-  nombre:string,
-  icono:any,
-  imagen:string,
-  texto:string,
-  esPar?:boolean
+interface Props {
+  nombre: string;
+  icono: any; // Componente o contenido dinámico
+  imagen: string;
+  texto: string;
+  esPar?: boolean; // Para determinar si el diseño alterna
 }
 
-const {nombre, icono, imagen, texto,esPar}=Astro.props
+const { nombre, icono, imagen, texto, esPar } = Astro.props;
 ---
 
-
 <div class="bg-[#ff6a3e] py-12">
-    <div class="container mx-auto px-6 py-12 bg-white rounded-lg shadow-md">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <!-- Imagen con botón de zoom -->
-         {
-          esPar &&(
-          <div class="relative group ">
-          {
-            <img 
+  <div class="container mx-auto px-6 py-12 bg-white rounded-lg shadow-md">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      {esPar && (
+        <div class="relative group">
+          <img 
             src={imagen}
-            alt="Huertas" 
+            alt={nombre} 
             class="w-full rounded-lg object-cover"
           />
-          }
         </div>
-          )
-         }
+      )}
 
-        <!-- Contenido textual -->
-        <div class="text-left">
-          <!-- Número grande -->
-          <div class="text-gray-100 text-[96px] font-bold -z-10 absolute -left-8 md:-left-12 top-0 md:top-6 opacity-20">
-            1
-          </div>
-          <!-- Título -->
-          <h2 class="text-[#ff6a3e] font-bold text-[60px] flex items-center gap-2">
-<<<<<<< HEAD
-            <span class="inline-flex "><Num1 /></span>
-            Iván está bien buena
-=======
-            <span class="inline-flex ">
-              {icono}
-            </span>
-            {nombre}
->>>>>>> 5b4ee5d (leraning)
-          </h2>
-          <!-- Descripción -->
-          <p class="text-gray-600 text-[30px]">
-           {texto}
-          </p>
-          <!-- Íconos de árboles -->
-          <div class="flex gap-8 mt-6">
-            <img src="/public/arbol.png" alt="Árbol 1" class="w-12 h-12" />
-            <img src="/public/arbol.png" alt="Árbol 2" class="w-12 h-12" />
-            <img src="/public/arbol.png" alt="Árbol 3" class="w-12 h-12" />
-          </div>
+      <div class="text-left relative">
+        <div class="text-gray-100 text-[96px] font-bold -z-10 absolute -left-8 md:-left-12 top-0 md:top-6 opacity-20">
+          {esPar ? "1" : "2"}
         </div>
-        {
-          !esPar &&(
-          <div class="relative group ">
-          {
-            <img 
-            src={imagen}
-            alt="Huertas" 
-            class="w-full rounded-lg object-cover"
-          />
-          }
+        <h2 class="text-[#ff6a3e] font-bold text-[60px] flex items-center gap-2">
+          <span class="inline-flex">
+            {icono}
+          </span>
+          {nombre}
+        </h2>
+        <p class="text-gray-600 text-[30px]">
+          {texto}
+        </p>
+        <div class="flex gap-8 mt-6">
+          <img src="/public/arbol.png" alt="Árbol 1" class="w-12 h-12" />
+          <img src="/public/arbol.png" alt="Árbol 2" class="w-12 h-12" />
+          <img src="/public/arbol.png" alt="Árbol 3" class="w-12 h-12" />
         </div>
-          )
-         }
-
       </div>
+
+      {!esPar && (
+        <div class="relative group">
+          <img 
+            src={imagen}
+            alt={nombre} 
+            class="w-full rounded-lg object-cover"
+          />
+        </div>
+      )}
     </div>
-  </div>  
+  </div>
+</div>
+
