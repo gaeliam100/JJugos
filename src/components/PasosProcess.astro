@@ -9,8 +9,7 @@ interface Props {
 
 const { nombre, imagen, texto, icono: Icono, esPar } = Astro.props;
 ---
-
-<div class="bg-[#ff6a3e] py-12">
+<div class="bg-[#ff6a3e] py-12 fade-in">
   <div class="container mx-auto px-6 py-12 bg-white rounded-lg shadow-md">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
       {esPar && (
@@ -56,3 +55,48 @@ const { nombre, imagen, texto, icono: Icono, esPar } = Astro.props;
   </div>
 </div>
 
+<style>
+  /* Estado inicial de la animación */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  /* Estado final de la animación */
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  function initAnimations() {
+    const fadeElements = document.querySelectorAll(".fade-in");
+
+    // Configurar el IntersectionObserver
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target); // Dejar de observar después de animar
+        }
+      });
+    });
+
+    // Reiniciar el estado inicial y observar
+    fadeElements.forEach((el) => {
+      el.classList.remove("visible"); // Restablecer el estado inicial
+      observer.observe(el); // Observar cada elemento
+    });
+  }
+
+  // Inicializar las animaciones en el DOM
+  document.addEventListener("DOMContentLoaded", initAnimations);
+
+  // Reinicializar animaciones tras navegación interna en Astro (SPA)
+  document.addEventListener("astro:after-swap", initAnimations);
+
+  // Solución adicional para navegaciones completas
+  window.addEventListener("load", initAnimations);
+</script>
