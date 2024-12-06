@@ -6,6 +6,8 @@ import Numero2 from '../components/Numero2.astro';
 import Numero3 from '../components/Numero3.astro';
 import Numero4 from '../components/Numero4.astro';
 import Numero5 from '../components/Numero5.astro';
+import Layout from '../layouts/Layout.astro';
+
 
 /* Declarar los pasos */
 const pasos = [
@@ -17,13 +19,15 @@ const pasos = [
 ];
 ---
 
-<Proceso />
-{pasos.map((r, index) => (
-  <PasosProcess
-    nombre={r.nombre}
-    imagen={r.imagen}
-    texto={r.texto}
-    icono={r.icono}
-    esPar={index % 2 === 0}
-  />
+<Layout title="JJUGOS">
+  <Proceso />
+  {pasos.map((r, index) => (
+    <PasosProcess
+      nombre={r.nombre}
+      imagen={r.imagen}
+      texto={r.texto}
+      icono={r.icono}
+      esPar={index % 2 === 0}
+    />
 ))}
+</Layout>
