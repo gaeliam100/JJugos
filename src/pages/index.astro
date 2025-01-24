@@ -41,76 +41,70 @@ const certificados = [
 <Layout title="JJUGOS">
   <Hero />
 
-  <SubSection/>
+  <SubSection />
 
-<Certificado
-title={certificados[0].title}
-subtitle={certificados[0].subtitle}
-list={certificados[0].list}
-/>
-<section
-class="container mx-auto px-4 py-20"
->
-	<Features />
-
-</section>
-<Certificado
-title={certificados[1].title}
-subtitle={certificados[1].subtitle}
-list={certificados[1].list}
-/>
+  <Certificado
+    title={certificados[0].title}
+    subtitle={certificados[0].subtitle}
+    list={certificados[0].list}
+  />
+  <section class="container mx-auto px-4 py-20">
+    <Features />
+  </section>
+  <Certificado
+    title={certificados[1].title}
+    subtitle={certificados[1].subtitle}
+    list={certificados[1].list}
+  />
 
   <Products />
 
   <Slider />
 
-
   <FinalCta />
 </Layout>
 
 <script type="module" is:inline>
-  import gsap from '../node_modules/gsap/index.js';
-  import { ScrollTrigger } from '../node_modules/gsap/ScrollTrigger.js';
-  import { Flip } from '../node_modules/gsap/Flip.js';
+  import gsap from "../node_modules/gsap/index.js";
+  import { ScrollTrigger } from "../node_modules/gsap/ScrollTrigger.js";
+  import { Flip } from "../node_modules/gsap/Flip.js";
 
   gsap.registerPlugin(ScrollTrigger);
   gsap.registerPlugin(Flip);
 
-  const preloaderBackground = document.querySelector('.preloader__background');
+  const preloaderBackground = document.querySelector(".preloader__background");
 
-  const preloaderText = document.querySelector('.preloader__text');
+  const preloaderText = document.querySelector(".preloader__text");
 
-  const master=gsap.timeline();
+  const master = gsap.timeline();
 
-  const setInitialStates=()=>{
-    gsap.set(preloaderText,{
-      yPercent:100
-    })
-  }
+  const setInitialStates = () => {
+    gsap.set(preloaderText, {
+      yPercent: 100,
+    });
+  };
 
   master.add(setInitialStates());
 
-
-
-  document.addEventListener('DOMContentLoaded', () => {
-    gsap.from('.fade-in', {
+  document.addEventListener("DOMContentLoaded", () => {
+    gsap.from(".fade-in", {
       scrollTrigger: {
-        trigger: '.fade-in',
-        start: 'top 80%', // Inicia la animación cuando el elemento está en el 80% de la ventana
-        end: 'bottom 20%', // Termina la animación cuando el elemento está en el 20% de la ventana
-        toggleActions: 'play none none none', // Reproduce la animación al entrar, no hace nada al salir
+        trigger: ".fade-in",
+        start: "top 80%", // Inicia la animación cuando el elemento está en el 80% de la ventana
+        end: "bottom 20%", // Termina la animación cuando el elemento está en el 20% de la ventana
+        toggleActions: "play none none none", // Reproduce la animación al entrar, no hace nada al salir
       },
       opacity: 0,
       y: 50,
       duration: 1,
     });
     // Entrada desde la izquierda
-    gsap.from('.fade-in-left', {
+    gsap.from(".fade-in-left", {
       scrollTrigger: {
-        trigger: '.fade-in-left',
-        start: 'top 80%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none none',
+        trigger: ".fade-in-left",
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none none",
       },
       opacity: 0,
       x: -100,
@@ -118,12 +112,12 @@ list={certificados[1].list}
     });
 
     // Entrada desde la derecha
-    gsap.from('.fade-in-right', {
+    gsap.from(".fade-in-right", {
       scrollTrigger: {
-        trigger: '.fade-in-right',
-        start: 'top 80%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none none',
+        trigger: ".fade-in-right",
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none none",
       },
       opacity: 0,
       x: 100,
@@ -131,12 +125,12 @@ list={certificados[1].list}
     });
 
     // Entrada desde arriba
-    gsap.from('.fade-in-top', {
+    gsap.from(".fade-in-top", {
       scrollTrigger: {
-        trigger: '.fade-in-top',
-        start: 'top 80%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none none',
+        trigger: ".fade-in-top",
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none none",
       },
       opacity: 0,
       y: -100,
@@ -144,12 +138,12 @@ list={certificados[1].list}
     });
 
     // Entrada desde abajo
-    gsap.from('.fade-in-bottom', {
+    gsap.from(".fade-in-bottom", {
       scrollTrigger: {
-        trigger: '.fade-in-bottom',
-        start: 'top 80%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none none',
+        trigger: ".fade-in-bottom",
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none none",
       },
       opacity: 0,
       y: 100,
@@ -157,25 +151,25 @@ list={certificados[1].list}
     });
 
     // Entrada con escala
-    gsap.from('.fade-in-scale', {
+    gsap.from(".fade-in-scale", {
       scrollTrigger: {
-        trigger: '.fade-in-scale',
-        start: 'top 80%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none none',
+        trigger: ".fade-in-scale",
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none none",
       },
       opacity: 0,
       scale: 0.8,
       duration: 1,
     });
 
-        // Rotación desde la izquierda
-        gsap.from('.rotate-in-left', {
+    // Rotación desde la izquierda
+    gsap.from(".rotate-in-left", {
       scrollTrigger: {
-        trigger: '.rotate-in-left',
-        start: 'top 80%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none none',
+        trigger: ".rotate-in-left",
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none none",
       },
       opacity: 0,
       x: -100,
@@ -184,12 +178,12 @@ list={certificados[1].list}
     });
 
     // Rotación desde la derecha
-    gsap.from('.rotate-in-right', {
+    gsap.from(".rotate-in-right", {
       scrollTrigger: {
-        trigger: '.rotate-in-right',
-        start: 'top 80%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none none',
+        trigger: ".rotate-in-right",
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none none",
       },
       opacity: 0,
       x: 100,
@@ -198,12 +192,12 @@ list={certificados[1].list}
     });
 
     // Rotación desde arriba
-    gsap.from('.rotate-in-top', {
+    gsap.from(".rotate-in-top", {
       scrollTrigger: {
-        trigger: '.rotate-in-top',
-        start: 'top 80%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none none',
+        trigger: ".rotate-in-top",
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none none",
       },
       opacity: 0,
       y: -100,
@@ -212,12 +206,12 @@ list={certificados[1].list}
     });
 
     // Rotación desde abajo
-    gsap.from('.rotate-in-bottom', {
+    gsap.from(".rotate-in-bottom", {
       scrollTrigger: {
-        trigger: '.rotate-in-bottom',
-        start: 'top 80%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none none',
+        trigger: ".rotate-in-bottom",
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none none",
       },
       opacity: 0,
       y: 100,
@@ -226,73 +220,73 @@ list={certificados[1].list}
     });
 
     // Entrada con rebote
-    gsap.from('.bounce-in', {
+    gsap.from(".bounce-in", {
       scrollTrigger: {
-        trigger: '.bounce-in',
-        start: 'top 80%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none none',
+        trigger: ".bounce-in",
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none none",
       },
       opacity: 0,
       y: 100,
-      ease: 'bounce.out',
+      ease: "bounce.out",
       duration: 1,
     });
-        // Entrada desde la izquierda con deslizamiento
-        gsap.from('.slide-in-left', {
+    // Entrada desde la izquierda con deslizamiento
+    gsap.from(".slide-in-left", {
       scrollTrigger: {
-        trigger: '.slide-in-left',
-        start: 'top 80%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none none',
+        trigger: ".slide-in-left",
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none none",
       },
       x: -100,
       duration: 1,
     });
 
     // Entrada desde la derecha con deslizamiento
-    gsap.from('.slide-in-right', {
+    gsap.from(".slide-in-right", {
       scrollTrigger: {
-        trigger: '.slide-in-right',
-        start: 'top 80%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none none',
+        trigger: ".slide-in-right",
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none none",
       },
       x: 100,
       duration: 1,
     });
 
     // Entrada desde arriba con deslizamiento
-    gsap.from('.slide-in-top', {
+    gsap.from(".slide-in-top", {
       scrollTrigger: {
-        trigger: '.slide-in-top',
-        start: 'top 80%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none none',
+        trigger: ".slide-in-top",
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none none",
       },
       y: -100,
       duration: 1,
     });
 
     // Entrada desde abajo con deslizamiento
-    gsap.from('.slide-in-bottom', {
+    gsap.from(".slide-in-bottom", {
       scrollTrigger: {
-        trigger: '.slide-in-bottom',
-        start: 'top 80%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none none',
+        trigger: ".slide-in-bottom",
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none none",
       },
       y: 100,
       duration: 1,
     });
 
     // Entrada con giro
-    gsap.from('.spin-in', {
+    gsap.from(".spin-in", {
       scrollTrigger: {
-        trigger: '.spin-in',
-        start: 'top 80%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none none',
+        trigger: ".spin-in",
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none none",
       },
       rotation: 360,
       duration: 1,
