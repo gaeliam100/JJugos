@@ -22,6 +22,7 @@ const certificados = [
       "seguridad alimentaria.",
       "Productos de calidad.",
     ],
+    image: "/img/certificado-kosher.png",
   },
   {
     title: "Certificado FSSC 22000",
@@ -32,6 +33,7 @@ const certificados = [
       "Seguridad alimentaria.",
       "Productos de calidad.",
     ],
+    image: "/img/certificado-fssc-22000.webp",
   },
 ];
 ---
@@ -60,7 +62,7 @@ list={certificados[1].list}
 
   <Products />
 
-  <!-- <Slider /> -->
+  <Slider />
 
 
   <FinalCta />
@@ -74,7 +76,7 @@ list={certificados[1].list}
   gsap.registerPlugin(ScrollTrigger);
   gsap.registerPlugin(Flip);
 
-  // const preloaderBackground = document.querySelector('.preloader__background');
+  const preloaderBackground = document.querySelector('.preloader__background');
 
   const preloaderText = document.querySelector('.preloader__text');
 

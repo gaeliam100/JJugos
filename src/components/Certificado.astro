@@ -6,9 +6,10 @@ interface Props{
     title: string;
     subtitle: string;
     list?: string[];
+    image?: string;
 }
 
-const { title, subtitle,list } = Astro.props;
+const { title, subtitle,list,image } = Astro.props;
 ---
 
 <section class="product-defined ">
@@ -27,7 +28,7 @@ const { title, subtitle,list } = Astro.props;
             </div>
             <div
              class="brief-media center one-half column fade-in-right">
-                <img src="https://gentle-liger-f28974.netlify.app/_astro/showcase-two.58d8af01.svg" alt="Showcase mockup">
+                <img src={image??""} alt="Showcase mockup">
             </div>
         </div>
     </div>
