@@ -477,7 +477,7 @@ productCards.forEach(function(productCard){
       bubble.style.transform = "translate(" + bubbleX + "%," + bubbleY + "%) scale(0.5)";
       bubble.style.animationName = 'bubbleHeader' + bubbleAnimation;
       bubble.style.animationDelay = bubbleDelay + 's';
-      bubble.style.zIndex = bubbleAnimation;
+      bubble.style.zIndex = bubbleAnimation.toString();
       bubble.className = 'bubble bubble-' + bubbleId;
       productCard.appendChild(bubble);
     }

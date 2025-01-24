@@ -60,13 +60,13 @@ list={certificados[1].list}
 
   <Products />
 
-  <Slider />
+  <!-- <Slider /> -->
 
 
   <FinalCta />
 </Layout>
 
-<script type="module">
+<script type="module" is:inline>
   import gsap from '../node_modules/gsap/index.js';
   import { ScrollTrigger } from '../node_modules/gsap/ScrollTrigger.js';
   import { Flip } from '../node_modules/gsap/Flip.js';
@@ -74,7 +74,7 @@ list={certificados[1].list}
   gsap.registerPlugin(ScrollTrigger);
   gsap.registerPlugin(Flip);
 
-  const preloaderBackground = document.querySelector('.preloader__background');
+  // const preloaderBackground = document.querySelector('.preloader__background');
 
   const preloaderText = document.querySelector('.preloader__text');
 
