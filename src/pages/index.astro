@@ -14,24 +14,24 @@ import Slider from "../components/Slider.astro";
 
 const certificados = [
   {
-    title: "Certificado Kosher",
+    title: "Beneficios de Elegir JJ Jugos",
     subtitle:
-      "Contamos con el certificado Kosher, que garantiza que nuestros productos son aptos para el consumo de la comunidad judía.",
-    list: [
-      "Garantisamos la calidad.",
-      "seguridad alimentaria.",
-      "Productos de calidad.",
-    ],
+      " Cumplimos con los más altos estándares para garantizar que cada gota de jugo sea pura y saludable.",
+    list: ["100% Natural.", "Proceso Sustentable.", "Certificación KOSHER"],
     image: "/img/certificado-kosher.png",
   },
   {
-    title: "Certificado FSSC 22000",
-    subtitle:
-      "Contamos con el certificado FSSC 22000, que garantiza que nuestros productos cumplen con los estándares de calidad y seguridad alimentaria.",
+    title: "FSSC 22000 Garantía de Calidad que Mereces 🌍",
+    subtitle: `
+    En JJ Jugos Naturales, nuestra prioridad es ofrecerte jugos 100% naturales que cumplan con los más altos
+estándares de seguridad alimentaria. La certificación FSSC 22000 asegura que cada producto ha sido
+elaborado bajo estrictos procesos de higiene, control y calidad. Esto no solo nos distingue, sino que también
+garantiza tu tranquilidad y confianza en cada sorbo.
+    `,
     list: [
-      "Garantisamos la calidad.",
-      "Seguridad alimentaria.",
-      "Productos de calidad.",
+      "Calidad Globalmente Reconocida",
+      "Procesos de Producción Seguros.",
+      "Compromiso con la Sostenibilidad.",
     ],
     image: "/img/certificado-fssc-22000.webp",
   },
@@ -47,6 +47,7 @@ const certificados = [
     title={certificados[0].title}
     subtitle={certificados[0].subtitle}
     list={certificados[0].list}
+    image="/img/certificado-kosher.png"
   />
   <section class="container mx-auto px-4 py-20">
     <Features />
@@ -55,9 +56,8 @@ const certificados = [
     title={certificados[1].title}
     subtitle={certificados[1].subtitle}
     list={certificados[1].list}
+    image="/img/certificado-fssc-22000.png"
   />
-
-  <Products />
 
   <Slider />
 
