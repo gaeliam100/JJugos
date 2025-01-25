@@ -4,6 +4,7 @@ import Footer from '../components/Footer.astro';
 import Navbar from '../components/Navbar.astro';
 import FooterBasti from '../components/FooterBasti.astro';
 import Whats from '../components/Whats.astro';
+import ClientsSection from '../components/ClientsSection.astro';
 
 interface Props {
 	title: string;
@@ -28,7 +29,8 @@ const { title } = Astro.props;
         <main id="main-section" class="my-20 p-14">
 		<slot />
         </main>
-		<Footer />
+        <ClientsSection title='Nuestros clientes' subTitle='Confían en nosotros' />
+		<!-- <Footer /> -->
         <Whats />
 	</body>
 </html>
@@ -48,7 +50,7 @@ body, html {
     overflow-x: hidden;
 }
   html {
-    font-size: 72%;
+    font-size: 65%;
     scroll-behavior: smooth;
   }
   body {
