@@ -1,147 +1,19 @@
 ---
-import JjugosLogo from "./JjugosLogo.astro";
+import RepetedSection from "./RepetedSection.astro";
 ---
-
-<div class="hero-image-start"></div>
-<div class="preloader">
-  <p class="preloader__text">
-    <span>Say hello to N3</span>
-  </p>
-  <div class="preloader__background"></div>
-</div>
-<div class="hero__wrapper">
-  <section class="hero">
-    <div class="hero__image">
-      <img src="https://images.unsplash.com/photo-1457803097035-3ace37af34a7?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="N3 Bike" />
-    </div>
-    <div class="hero__content">
-      <p class="hero__caption">
-          <img src="" alt="">
-      </p>
-      <h1 class="hero__title">
-        <span>
-          <span>Jugos 100%</span>
-        </span>
-        <span>
-          <span>Naturales Pausterizados</span>
-        </span>
-      </h1>
-
-    </div>
-  </section>
-</div>
-
-
-<style>
-  .button {
-	border: none;
-	background: black;
-	color: white;
-	padding: 12px 40px;
-	border-radius: 100px;
-	font-size: 16px;
-	cursor: pointer;
-}
-
-.button--white {
-	background-color: white;
-	color: black;
-}
-  .preloader {
-	overflow: hidden;
-	opacity: 0;
-}
-
-.preloader__background {
-	position: fixed;
-	inset: 0;
-	z-index: 2;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	background-color: black;
-	color: white;
-}
-
-.preloader__text {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	overflow: hidden;
-	line-height: 1;
-	z-index: 3;
-	color: white;
-}
-
-.preloader__text span {
-	display: block;
-}
-
-  .hero {
-	position: relative;
-	height: 100%;
-	width: 100%;
-	overflow: hidden;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: #fff;
-	text-align: center;
-	padding-inline: 24px;
-}
-
-.hero__wrapper {
-	border-radius: 16px;
-	overflow: hidden;
-	height: calc(100vh - 124px);
-	margin-inline: 24px;
-}
-
-.hero__image {
-	position: absolute;
-	inset: 0;
-	width: 100%;
-	height: 100%;
-	z-index: -1;
-	overflow: hidden;
-}
-
-.hero__caption {
-	overflow: hidden;
-	margin-bottom: 32px;
-	font-size: 108px;
-}
-
-.hero__caption span {
-	display: block;
-}
-
-.hero__title {
-	font-size: 104px;
-	font-weight: 400;
-	max-width: 11ch;
-	margin-bottom: 64px;
-	line-height: 1.2;
-	letter-spacing: -0.03em;
-}
-
-.hero__title span {
-	display: block;
-	overflow: hidden;
-	line-height: 1.05;
-}
-
-.hero__title span span {
-	display: block;
-}
-
-.hero-image-start {
-	position: absolute;
-	inset: 0;
-	width: 100%;
-	height: 100vh;
-}
-</style>
+<RepetedSection>
+            <div class="flex flex-col items-start gap-8 sm:gap-10 bg-image">
+                <div class="flex flex-col gap-4 sm:gap-6 items-start max-w-7xl">
+                    <h1
+                        class="font-medium text-white tracking-tight lg:text-6xl sm:text-5xl text-4xl"
+                    >
+                    30 Años de Experiencia Fabricando Concentrado de Color para la Industria del Plástico
+                    </h1>
+                    <p
+                        class="dark:text-primary-200/70 text-primary-250/70 text-lg sm:text-xl text-white "
+                    >
+                    Porque cada detalle cuenta, confía en nuestro Masterbatch para resultados inigualables
+                    </p>
+                </div>
+            </div>
+</RepetedSection>

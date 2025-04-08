@@ -1,10 +1,9 @@
 ---
 import ViewTransitions from 'astro/components/ViewTransitions.astro';
-import Footer from '../components/Footer.astro';
 import Navbar from '../components/Navbar.astro';
-import FooterBasti from '../components/FooterBasti.astro';
 import Whats from '../components/Whats.astro';
 import ClientsSection from '../components/ClientsSection.astro';
+import Footer from '../components/Footer.astro';
 
 interface Props {
 	title: string;
@@ -22,11 +21,12 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
          <link rel="stylesheet" href="assets/css/main.css">
+		 <ViewTransitions />
 		<title>{title}</title>
 	</head>
 	<body>
         <Navbar />
-        <main id="main-section" class="my-20 p-14">
+        <main id="main-section">
 		<slot />
         </main>
         <ClientsSection title='Nuestros clientes' subTitle='Confían en nosotros' />
@@ -35,94 +35,11 @@ const { title } = Astro.props;
 	</body>
 </html>
 
-<style is:global>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
-
-:root {
-    --accent: #CA555D;
-    --tenary: #8574EB;
-}
-
-body, html {
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
-    margin: 0px;
-    overflow-x: hidden;
-}
-  html {
-    font-size: 65%;
-    scroll-behavior: smooth;
-  }
-  body {
-    font-size: 1.5em;
-    line-height: 1.6;
-    font-weight: 400;
-    font-family: Raleway, HelveticaNeue, "Helvetica Neue", Helvetica, Arial,
-      sans-serif;
-    color: #222;
-  }
-.block {
-    display: block;
-}
-
-.h1-title, .h2-title {
-    font-weight: 700;
-}
-
-.h1-title {
-    font-size: 4.2rem;
-}
-
-.h2-title {
-    font-size: 3rem;
-}
-
-.h3-title {
-    font-size: 2.5rem;
-}
-
-.text-container {
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.center {
-    text-align: center;
-}
-
-.button {
-    border-radius: 40px;
-    text-transform: none;
-    font-weight: 500;
-    font-size: 1.4rem;
-}
-
-.button.button-primary {
-    background-color: var(--accent);
-    border-color: var(--accent);
-}
-
-.button.button-primary:hover {
-    background-color: var(--accent);
-    border-color: var(--accent);
-}
-
-.button.lg {
-    height: 50px;
-    line-height: 48px;
-}
-
-.flex {
-    display: flex;
-}
-
-section.padded {
-    padding: 70px 0;
-}
-
-@media (max-width: 900px) {
-    .h1-title {
-        font-size: 3.2rem;
-    }
-}
+<style>
+	html,
+body {
+		margin: 0;
+		padding: 0;
+		overflow: scroll;
+	}
 </style>
