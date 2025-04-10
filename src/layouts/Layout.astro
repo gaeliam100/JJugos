@@ -1,12 +1,12 @@
 ---
-import ViewTransitions from 'astro/components/ViewTransitions.astro';
-import Navbar from '../components/Navbar.astro';
-import Whats from '../components/Whats.astro';
-import ClientsSection from '../components/ClientsSection.astro';
-import Footer from '../components/Footer.astro';
+import ViewTransitions from "astro/components/ViewTransitions.astro";
+import Navbar from "../components/Navbar.astro";
+import Whats from "../components/Whats.astro";
+import ClientsSection from "../components/ClientsSection.astro";
+import Footer from "../components/Footer.astro";
 
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -14,32 +14,43 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-         <link rel="stylesheet" href="assets/css/main.css">
-		 <ViewTransitions />
-		<title>{title}</title>
-	</head>
-	<body>
-        <Navbar />
-        <main id="main-section">
-		<slot />
-        </main>
-        <ClientsSection title='Nuestros clientes' subTitle='Confían en nosotros' />
-		<!-- <Footer /> -->
-        <Whats />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <ViewTransitions />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Navbar />
+    <main id="main-section">
+      <slot />
+    </main>
+    <ClientsSection title="Nuestros clientes" subTitle="Confían en nosotros" />
+    <Whats />
+	<Footer/>
+  </body>
 </html>
 
 <style>
-	html,
-body {
-		margin: 0;
-		padding: 0;
-		overflow: scroll;
-	}
+  @font-face {
+    font-family: "MiFuente";
+    src:
+      url("/fonts/Inter/Inter-Italic-VariableFont_opsz\,wght.ttf") format("woff2"),
+      url("/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf") format("woff");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: scroll;
+    font-family: "Inter", sans-serif;
+  }
 </style>

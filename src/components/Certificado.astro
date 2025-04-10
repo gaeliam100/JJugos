@@ -1,108 +1,85 @@
 ---
-import Showcase from '../assets/showcase-two.svg'
-import MainTitle from './MainTitle.astro';
+import { Link } from "@heroui/react";
 
-interface Props{
-    title: string;
-    subtitle: string;
-    list?: string[];
-    image?: string;
+// src/components/Certificado.astro
+interface CertificadoData {
+  titleTop?: string;
+  title: string;
+  subtitle: string;
+  list: {
+    label: string;
+    description: string;
+    link?: string;
+  }[];
+  image: string;
 }
 
-const { title, subtitle,list,image } = Astro.props;
+interface CertificadoProps {
+  data: CertificadoData;
+}
+const { titleTop, title, subtitle, list, image } = Astro.props;
 ---
 
-<section class="product-defined ">
-    <div class="container-css">
-         <div class="row product-brief-items">
-            <div class="brief-tab one-half column">
-                <MainTitle title={title} />
-                <p class="m-paragraph m-margin">{subtitle}</p>
-                {list && (
-                    <ol class="row">
-                        {list.map((item) => (
-                            <li class="one-third column" ><a href="#">{item}</a></li>
-                        ))}
-                    </ol>
-                )}
-            </div>
-            <div
-             class="brief-media center one-half column fade-in-right">
-                <img src={image??""} alt="Showcase mockup">
-            </div>
+<div class="overflow-hidden bg-white py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div
+      class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"
+    >
+      <div class="lg:pr-8 lg:pt-4">
+        <div class="lg:max-w-lg">
+          <h2 class="text-base/7 font-semibold text-orange-600">{titleTop}</h2>
+          <p
+            class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl"
+          >
+            {title}
+          </p>
+          <p class="mt-6 text-lg/8 text-gray-600">{subtitle}</p>
+          <dl
+            class="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none"
+          >
+            {
+              list.map((item) => (
+                <div class="relative pl-9">
+                  <dt class="inline font-semibold text-gray-900">
+                    {item.label}
+                  </dt>
+                  <dt class="inline font-semibold text-gray-900">
+                    <svg
+                      class="absolute left-1 top-1 size-5 text-orange-600"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.5 17a4.5 4.5 0 0 1-1.44-8.765 4.5 4.5 0 0 1 8.302-3.046 3.5 3.5 0 0 1 4.504 4.272A4 4 0 0 1 15 17H5.5Zm3.75-2.75a.75.75 0 0 0 1.5 0V9.66l1.95 2.1a.75.75 0 1 0 1.1-1.02l-3.25-3.5a.75.75 0 0 0-1.1 0l-3.25 3.5a.75.75 0 1 0 1.1 1.02l1.95-2.1v4.59Z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    {item.description}
+                  </dt>
+                  {item.link && (
+                    <Link
+                      client:visible
+                      href={item.link}
+                      className="absolute left-0 top-0 -z-10 h-full w-full rounded-lg"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    />
+                  )}
+                </div>
+              ))
+            }
+          </dl>
         </div>
+      </div>
+      <img
+        src={image}
+        alt="Product screenshot"
+        class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
+        width="2432"
+        height="1442"
+      />
     </div>
-</section>
-
-
-<style >
-.product-defined .brief-media img {
-    width: 400px;
-}
-
-@media (max-width: 700px) {
-    .product-defined .brief-media img {
-        width: 300px;
-    }
-}
-
-.product-defined .brief-tab {
-    padding-top: 50px;
-}
-
-.product-defined ol {
-    counter-reset: step;
-    align-items: center;
-    list-style: none;
-}
-
-.product-defined ol > li {
-    padding-left: 40px;
-    position: relative;
-}
-
-.product-defined ol > li::before {
-    counter-increment: step;
-    content: counter(step);
-    width: 26px;
-    height: 26px;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    margin-top: -13px;
-    text-align: center;
-    font-size: 13px;
-    line-height: 1.8em;
-    border: 2px solid #000;
-    font-weight: 700;
-    border-radius: 8px;
-}
-
-.product-defined ol > li a {
-    text-decoration: none;
-    color: #000;
-}
-
-@media (max-width: 900px) {
-    .product-defined ol {
-        gap: 0px;
-        flex-direction: column;
-    }
-
-    .product-defined ol .column {
-        width: 100%;
-        padding-left: 30px;
-        margin-left: 0;
-    }
-
-    .product-defined ol .column::before {
-        width: 18px;
-        height: 18px;
-        font-size: 10px;
-    }
-
-    .product-defined ol .column a {
-        font-size: 1.3rem;
-    }
-}
-</style>
+  </div>
+</div>

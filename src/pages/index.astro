@@ -1,66 +1,75 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-import ContactHero from "../components/ContactHero.astro";
 import Hero from "../components/Hero.astro";
-import Footer from "../components/Footer.astro";
-import FooterBasti from "../components/FooterBasti.astro";
 import FinalCta from "../components/FinalCta.astro";
 import Certificado from "../components/Certificado.astro";
-import Features from "../components/Features.astro";
 import SubSection from "../components/SubSection.astro";
-import Products from "../components/Products.astro";
-import Slider from "../components/Slider.astro";
+import Bento from "../components/Bento.astro";
+import LandingCards from "../components/LandingCards";
 
 const certificados = [
   {
     title: "Beneficios de Elegir JJ Jugos",
-    subtitle:
-      " Cumplimos con los más altos estándares para garantizar que cada gota de jugo sea pura y saludable.",
-    list: ["100% Natural.", "Proceso Sustentable.", "Certificación KOSHER"],
+    subtitle: "Cumplimos con los más altos estándares para garantizar que cada gota de jugo sea pura y saludable.",
+    list: [
+      {
+        label: "100% Natural",
+        description: "Nuestros productos están elaborados únicamente con frutas frescas sin aditivos ni conservadores.",
+      },
+      {
+        label: "Proceso Sustentable",
+        description: "Minimizamos el impacto ambiental en cada etapa, desde la cosecha hasta el envasado.",
+      },
+      {
+        label: "Certificación KOSHER",
+        description: "Cumplimos con estrictas normas de calidad y pureza reconocidas internacionalmente.",
+        link: "https://es.wikipedia.org/wiki/Kosher",
+      },
+    ],
     image: "/img/certificado-kosher.png",
   },
   {
     title: "FSSC 22000 Garantía de Calidad que Mereces 🌍",
-    subtitle: `
-    En JJ Jugos Naturales, nuestra prioridad es ofrecerte jugos 100% naturales que cumplan con los más altos
-estándares de seguridad alimentaria. La certificación FSSC 22000 asegura que cada producto ha sido
-elaborado bajo estrictos procesos de higiene, control y calidad. Esto no solo nos distingue, sino que también
-garantiza tu tranquilidad y confianza en cada sorbo.
-    `,
+    subtitle: "En JJ Jugos Naturales, nuestra prioridad es ofrecerte jugos 100% naturales que cumplan con los más altos estándares de seguridad alimentaria. La certificación FSSC 22000 asegura que cada producto ha sido elaborado bajo estrictos procesos de higiene, control y calidad. Esto no solo nos distingue, sino que también garantiza tu tranquilidad y confianza en cada sorbo.",
     list: [
-      "Calidad Globalmente Reconocida",
-      "Procesos de Producción Seguros.",
-      "Compromiso con la Sostenibilidad.",
+      {
+        label: "Calidad Globalmente Reconocida",
+        description: "La certificación FSSC 22000 es avalada por la Iniciativa Global de Seguridad Alimentaria (GFSI), garantizando estándares internacionales.",
+      },
+      {
+        label: "Procesos de Producción Seguros",
+        description: "Cada lote se elabora bajo protocolos que aseguran la inocuidad desde el origen hasta el consumo.",
+      },
+      {
+        label: "Compromiso con la Sostenibilidad",
+        description: "Integramos prácticas sostenibles y responsables con el medio ambiente en todo nuestro proceso productivo.",
+        link: "https://www.fssc22000.com/",
+      },
     ],
-    image: "/img/certificado-fssc-22000.webp",
+    image: "/img/certificado-fssc-22000.png",
   },
 ];
 ---
 
 <Layout title="JJUGOS">
   <Hero />
-
   <SubSection />
-
   <Certificado
-    title={certificados[0].title}
-    subtitle={certificados[0].subtitle}
-    list={certificados[0].list}
-    image="/img/certificado-kosher.png"
-  />
-  <section class="container mx-auto px-4 py-20">
-    <Features />
-  </section>
-  <Certificado
-    title={certificados[1].title}
-    subtitle={certificados[1].subtitle}
-    list={certificados[1].list}
-    image="/img/certificado-fssc-22000.png"
-  />
-
-  <Slider />
-
+  titleTop="KOSHER"
+  title={certificados[0].title}
+  subtitle={certificados[0].subtitle}
+  list={certificados[0].list}
+  image={certificados[0].image}
+/> 
+   <LandingCards client:load />
+   <Certificado
+   titleTop="FSSC 22000"
+   title={certificados[1].title}
+   subtitle={certificados[1].subtitle}
+   list={certificados[1].list}
+   image={certificados[1].image}
+ />
+  <Bento />
   <FinalCta />
 </Layout>
 
