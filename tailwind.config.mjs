@@ -23,6 +23,10 @@ module.exports = {
 			"scrolling-banner": "scrolling-banner var(--duration) linear infinite",
 			"scrolling-banner-vertical": "scrolling-banner-vertical var(--duration) linear infinite",
 		  },
+		  backgroundImage: {
+			"hero-section-centered-navbar":
+			"linear-gradient(137deg, #F4F4F5 20%, #FFA500 35%, #F8E5EC 46.96%, #FDD0DF 63.99%, #008000 80%, #A9EAF0 98.9%)",
+		},
 	},
   },
   darkMode: "class",

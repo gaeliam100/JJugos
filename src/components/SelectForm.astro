@@ -1,0 +1,14 @@
+---
+const { labelTitle, nameSelect, options, required} = Astro.props;
+---
+<div class="flex items-center justify-center w-full">
+  <div class="relative w-full">
+    <select name={nameSelect}  class="border-b border-b-gray-300 bg-inherit peer w-full">
+        <option value="" >Selecciona una opción</option>
+        {options.map((option) => (
+            <option value={option.value}>{option.label}</option>
+        ))}
+    </select>
+    <label class="absolute left-0 -top-2 cursor-text peer-focus:text-xs peer-focus:-top-4 transition-all peer-focus:text-blue-700 peer peer-valid:-top-4 peer-valid:text-blue-700 peer-valid:text-xs" for={nameSelect}>{labelTitle}</label>
+  </div>
+</div>

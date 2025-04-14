@@ -1,32 +1,264 @@
 ---
-import Proceso from '../components/Proceso.astro';
-import PasosProcess from '../components/PasosProcess.astro';
-import Numero1 from '../components/Numero1.astro';
-import Numero2 from '../components/Numero2.astro';
-import Numero3 from '../components/Numero3.astro';
-import Numero4 from '../components/Numero4.astro';
-import Numero5 from '../components/Numero5.astro';
-import Layout from '../layouts/Layout.astro';
+import PasosProcess from "../components/PasosProcess";
+import Numero1 from "../components/Numero1.astro";
+import Numero2 from "../components/Numero2.astro";
+import Numero3 from "../components/Numero3.astro";
+import Numero4 from "../components/Numero4.astro";
+import Numero5 from "../components/Numero5.astro";
+import Layout from "../layouts/Layout.astro";
+import Proceso from "../components/Proceso";
 
 /* Declarar los pasos */
 const pasos = [
-  { nombre: 'HUERTAS', imagen: 'https://www.starjuice.com.mx/assets/images/proceso1.jpg', texto: 'Su cultivación es en base a procedimientos y técnicas de agricultura orgánica.', icono: Numero1 },
-  { nombre: 'FRUTA ORGÁNICA', imagen: 'https://www.starjuice.com.mx/assets/images/proceso1.jpg', texto: 'Selección, inspección y pizca de fruta orgánica de nuestras huertas certificadas.', icono: Numero2 },
-  { nombre: 'TRANSPORTE', imagen: 'https://www.starjuice.com.mx/assets/images/proceso3.jpg', texto: 'Contamos con vehículos de uso exclusivo para transportar nuestra fruta orgánica.', icono: Numero3 },
-  { nombre: 'QA INSPECCIÓN', imagen: 'https://www.starjuice.com.mx/assets/images/proceso5.jpg', texto: 'El área de aseguramiento de calidad inspecciona la fruta orgánica para aprobación.', icono: Numero4 },
-  { nombre: 'RECEPCIÓN', imagen: 'https://www.starjuice.com.mx/assets/images/proceso7.jpg', texto: 'Pesado y recepción de fruta orgánica.', icono: Numero5 },
+  {
+    nombre: "HUERTAS",
+    imagen: "https://www.starjuice.com.mx/assets/images/proceso1.jpg",
+    texto:
+      "Su cultivación es en base a procedimientos y técnicas de agricultura orgánica.",
+    icono: Numero1,
+  },
+  {
+    nombre: "FRUTA ORGÁNICA",
+    imagen: "https://www.starjuice.com.mx/assets/images/proceso1.jpg",
+    texto:
+      "Selección, inspección y pizca de fruta orgánica de nuestras huertas certificadas.",
+    icono: Numero2,
+  },
+  {
+    nombre: "TRANSPORTE",
+    imagen: "https://www.starjuice.com.mx/assets/images/proceso3.jpg",
+    texto:
+      "Contamos con vehículos de uso exclusivo para transportar nuestra fruta orgánica.",
+    icono: Numero3,
+  },
+  {
+    nombre: "QA INSPECCIÓN",
+    imagen: "https://www.starjuice.com.mx/assets/images/proceso5.jpg",
+    texto:
+      "El área de aseguramiento de calidad inspecciona la fruta orgánica para aprobación.",
+    icono: Numero4,
+  },
+  {
+    nombre: "RECEPCIÓN",
+    imagen: "https://www.starjuice.com.mx/assets/images/proceso7.jpg",
+    texto: "Pesado y recepción de fruta orgánica.",
+    icono: Numero5,
+  },
 ];
 ---
 
 <Layout title="JJUGOS">
   <Proceso />
-  {pasos.map((r, index) => (
-    <PasosProcess
-      nombre={r.nombre}
-      imagen={r.imagen}
-      texto={r.texto}
-      icono={r.icono}
-      esPar={index % 2 === 0}
-    />
-))}
+
+  <div class="wrapper ">
+    <div class="container">
+      <h1 class="text-center text-[clamp(2.125rem,1.142rem+3.659vw,4rem)] font-bold leading-none text-black">
+        Proceso de producción        
+        </h1>
+      <h2 class="text-center text-2xl font-bold leading-none text-black">
+        Conoce el proceso de producción de nuestros jugos.
+
+      </h2>
+    </div>
+    <div class="steps">
+      <div class="level left">
+        <div class="steps-content">
+          <PasosProcess
+            nombre={pasos[0].nombre}
+            imagen={pasos[0].imagen}
+            texto={pasos[0].texto}
+            client:visible
+          />
+        </div>
+        <div class="steps-count">
+          <Numero1 />
+        </div>
+      </div>
+      <div class="level right">
+        <div class="steps-content">
+          <PasosProcess
+            nombre={pasos[1].nombre}
+            imagen={pasos[1].imagen}
+            texto={pasos[1].texto}
+            client:visible
+          />
+        </div>
+        <div class="steps-count">
+          <Numero2 />
+        </div>
+      </div>
+      <div class="level left">
+        <div class="steps-content">
+          <PasosProcess
+            nombre={pasos[2].nombre}
+            imagen={pasos[2].imagen}
+            texto={pasos[2].texto}
+            client:visible
+          />
+        </div>
+        <div class="steps-count">
+          <Numero3 />
+        </div>
+      </div>
+      <div class="level right">
+        <div class="steps-content">
+          <PasosProcess
+            nombre={pasos[3].nombre}
+            imagen={pasos[3].imagen}
+            texto={pasos[3].texto}
+            client:visible
+          />
+        </div>
+        <div class="steps-count">
+          <Numero4 />
+        </div>
+      </div>
+      <div class="level left">
+        <div class="steps-content">
+          <PasosProcess
+            nombre={pasos[4].nombre}
+            imagen={pasos[4].imagen}
+            texto={pasos[4].texto}
+            client:visible
+          />
+        </div>
+        <div class="steps-count">
+          <Numero5 />
+        </div>
+      </div>
+    </div>
+  </div>
 </Layout>
+
+<style>
+  .wrapper {
+    max-width: "100%";
+    width: 100%;
+    padding: 60px 30px;
+    margin: 0 auto;
+  }
+
+  .level {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 60px 0;
+    position: relative;
+  }
+  .level > * {
+    /* width: calc(50% - 45px); */
+  }
+  .level:after {
+    content: "";
+    /* width: calc(50% - 45px); */
+  }
+  .level:before {
+    content: "";
+    left: 50%;
+    top: 0;
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    z-index: -1;
+    background-color: #000;
+    transform: translateX(-50%);
+  }
+  .level:first-child:before {
+    top: 50%;
+  }
+  .level:last-child:before {
+    top: 0;
+    height: 50%;
+  }
+  .level .steps-content:before {
+    position: absolute;
+    right: -45px;
+    top: 27px;
+    content: "";
+    width: 50%;
+    height: 2px;
+    background-color: #000;
+    z-index: -1;
+  }
+  .level.right {
+    flex-direction: row-reverse;
+  }
+  .level.right .steps-content:before {
+    position: absolute;
+    left: -45px;
+    top: 27px;
+    content: "";
+    width: 50%;
+    height: 2px;
+    background-color: #000;
+    z-index: -1;
+  }
+
+  .steps-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 19px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  .steps-card-title {
+    position: relative;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #fff;
+    margin-bottom: 10px;
+  }
+  .steps-card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+  .steps-card-desc {
+    text-align: center;
+  }
+  .steps-count {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    background-color: transparent;
+    border-radius: 50%;
+  }
+
+  .steps-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 19px;
+    position: relative;
+    width: 100%;
+  }
+
+  .steps-content:before {
+    position: absolute;
+    right: -45px;
+    top: 27px;
+    content: "";
+    width: 50%;
+    height: 2px;
+    background-color: #000;
+    z-index: -1;
+  }
+
+  .level.right .steps-content:before {
+    position: absolute;
+    left: -45px;
+    top: 27px;
+    content: "";
+    width: 50%;
+    height: 2px;
+    background-color: #000;
+    z-index: -1;
+  }
+</style>

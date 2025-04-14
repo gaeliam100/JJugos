@@ -1,0 +1,6 @@
+---
+const {title,color,isGradient} =Astro.props;
+---
+<h1 class=`font-bold pb-8 text-${color} font-heading leading-tighter tracking-tighter mt-4 mb-4 md:text-6xl text-5xl ${isGradient?"bg-gradient-to-r from-cyan-400 via-blue-900 to-blue-500 text-clip  bg-clip-text  text-transparent h4-gradient":" "}`>
+    {title}
+</h1>
