@@ -35,18 +35,18 @@ export const ProductCard: React.FC<ProcutoProps> = ({ data }) => {
       >
         <Card
           isFooterBlurred
-          className="w-full h-[380px] bg-green-400 relative"
+          className="w-full h-[450px] bg-green-400 relative"
           classNames={{
             base:"bg-green"
           }}
         >
+
           <CardHeader className="absolute z-10 top-1 flex-col items-start">
-            <Chip 
+          <Chip 
             style={{
               background:data.color
             }}
-            className="text-tiny text-white uppercase font-bold ">New</Chip>
-            <h4 className="text-black font-medium text-2xl">Acme camera</h4>
+            className="text-tiny text-white uppercase font-bold ">{data.nombre}</Chip>
           </CardHeader>
           <Image
             removeWrapper
@@ -98,14 +98,11 @@ export const ProductCard: React.FC<ProcutoProps> = ({ data }) => {
               src="https://i.pinimg.com/originals/28/3e/53/283e53880ea4fd483c4968d89b143866.png"
             />
           </motion.div>
-          <CardFooter className="absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
+          <CardFooter className="absolute flex flex-col bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
+              <h4 className="text-gray-700 text-left  text-base flex-1">{data.titulo}</h4>
             <div>
-              <p className="text-black text-tiny">Available soon.</p>
-              <p className="text-black text-tiny">Get notified.</p>
+              <p className="text-gray-500 text-tiny text-wrap">{data.descripcion}</p>
             </div>
-            <Button className="text-tiny" color="primary" radius="full" size="sm">
-              Notify Me
-            </Button>
           </CardFooter>
         </Card>
       </motion.div>

@@ -4,7 +4,7 @@
         "nombre": "Jugo de Naranja",
         "titulo": "El Clásico Natural, Puro y Refrescante 🍊",
         "descripcion": "Disfruta del jugo de naranja 100% natural, hecho con las mejores frutas seleccionadas. Sin azúcares añadidos ni conservadores, es la opción perfecta para empezar tu día con energía y frescura.",
-        "color":"red"
+        "color":"orange"
       },
       {
         "nombre": "Jugo de Toronja",
@@ -18,7 +18,7 @@
         "titulo": "Un Clásico Versátil y Refrescante 🍋",
         "imagenProducto":"https://static.vecteezy.com/system/resources/previews/010/064/040/non_2x/realistic-cans-white-for-mock-up-soda-can-mock-up-free-png.png",
         "descripcion": "Perfecto para preparar bebidas o disfrutar solo, nuestro jugo de limón es 100% natural y puro, elaborado con frutas de la más alta calidad."
-      ,        "color":"red"
+      ,        "color":"green"
       
 
       },
@@ -27,7 +27,7 @@
         "titulo": "La Frescura de la Temporada, Directo a Tu Mesa 🍊",
         "imagenProducto":"https://static.vecteezy.com/system/resources/previews/010/064/040/non_2x/realistic-cans-white-for-mock-up-soda-can-mock-up-free-png.png",
         "descripcion": "Solo por tiempo limitado, disfruta del sabor dulce y vibrante del jugo de mandarina, elaborado con frutas frescas y sin ningún aditivo. Perfecto para refrescar tus días."
-      ,        "color":"red"
+      ,        "color":"orange"
 
       },
       {
@@ -35,7 +35,7 @@
         "titulo": "Nutrientes y Frescura en Cada Gota 🥕",
         "imagenProducto":"https://static.vecteezy.com/system/resources/previews/010/064/040/non_2x/realistic-cans-white-for-mock-up-soda-can-mock-up-free-png.png",
         "descripcion": "Nuestro jugo de zanahoria es la opción ideal para quienes buscan salud y sabor en un solo vaso. Natural, sin conservadores y lleno de vitaminas."
-      ,        "color":"red"
+      ,        "color":"orange"
 
       }
     ],
