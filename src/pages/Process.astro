@@ -11,125 +11,123 @@ import Proceso from "../components/Proceso";
 /* Declarar los pasos */
 const pasos = [
   {
-    nombre: "HUERTAS",
-    imagen: "https://www.starjuice.com.mx/assets/images/proceso1.jpg",
+    nombre: "LLEGADA DE NARANJA",
+    imagen: "https://placehold.co/400x400",
     texto:
-      "Su cultivación es en base a procedimientos y técnicas de agricultura orgánica.",
+      "Las naranjas llegan desde campos certificados, listas para ser procesadas bajo estrictos controles de calidad.",
     icono: Numero1,
   },
   {
-    nombre: "FRUTA ORGÁNICA",
-    imagen: "https://www.starjuice.com.mx/assets/images/proceso1.jpg",
+    nombre: "LAVADO",
+    imagen: "https://placehold.co/400x400",
     texto:
-      "Selección, inspección y pizca de fruta orgánica de nuestras huertas certificadas.",
+      "Se realiza un lavado automatizado con agua potable y cepillos rotativos para remover tierra, pesticidas y residuos.",
     icono: Numero2,
   },
   {
-    nombre: "TRANSPORTE",
-    imagen: "https://www.starjuice.com.mx/assets/images/proceso3.jpg",
+    nombre: "SELECCIÓN POR TAMAÑO",
+    imagen: "https://placehold.co/400x400",
     texto:
-      "Contamos con vehículos de uso exclusivo para transportar nuestra fruta orgánica.",
+      "Las frutas se clasifican mecánicamente por tamaño para asegurar una extracción uniforme y eficiente.",
     icono: Numero3,
   },
   {
-    nombre: "QA INSPECCIÓN",
-    imagen: "https://www.starjuice.com.mx/assets/images/proceso5.jpg",
+    nombre: "EXTRACCIÓN EQUIPO FMC",
+    imagen: "https://placehold.co/400x400",
     texto:
-      "El área de aseguramiento de calidad inspecciona la fruta orgánica para aprobación.",
+      "Las naranjas pasan al extractor FMC que obtiene el jugo separando cáscara, pulpa y semillas sin alterar el sabor.",
     icono: Numero4,
   },
   {
-    nombre: "RECEPCIÓN",
-    imagen: "https://www.starjuice.com.mx/assets/images/proceso7.jpg",
-    texto: "Pesado y recepción de fruta orgánica.",
+    nombre: "LLENADO DE TANQUE",
+    imagen: "https://placehold.co/400x400",
+    texto:
+      "El jugo recién extraído se transfiere a tanques de acero inoxidable donde se almacena temporalmente bajo condiciones sanitarias.",
     icono: Numero5,
   },
+  {
+    nombre: "PASTEURIZACIÓN",
+    imagen: "https://placehold.co/400x400",
+    texto:
+      "El jugo es calentado a temperatura controlada para eliminar bacterias y conservar sus propiedades nutricionales.",
+    icono: null,
+  },
+  {
+    nombre: "LLENADO EN ENVASE",
+    imagen: "https://placehold.co/400x400",
+    texto:
+      "Se llena automáticamente cada envase con jugo pasteurizado, en una línea de producción higiénica y de alta precisión.",
+    icono: null,
+  },
+  {
+    nombre: "CODIFICADO",
+    imagen: "https://placehold.co/400x400",
+    texto:
+      "Cada envase se marca con número de lote y fecha de caducidad para asegurar trazabilidad y control de calidad.",
+    icono: null,
+  },
+  {
+    nombre: "EMPACADO",
+    imagen: "https://placehold.co/400x400",
+    texto:
+      "Los envases codificados se agrupan, embalan y organizan en pallets para su fácil almacenamiento y transporte.",
+    icono: null,
+  },
+  {
+    nombre: "CÁMARA DE FRÍO",
+    imagen: "https://placehold.co/400x400",
+    texto:
+      "Los productos son almacenados en cámaras de refrigeración para mantener la frescura del jugo hasta su distribución.",
+    icono: null,
+  },
+  {
+    nombre: "EMBARCAR",
+    imagen: "https://placehold.co/400x400",
+    texto:
+      "El producto empaquetado se carga en vehículos con control de temperatura para iniciar su entrega a los clientes.",
+    icono: null,
+  },
+  {
+    nombre: "ENVÍO",
+    imagen: "https://placehold.co/400x400",
+    texto:
+      "El jugo natural llega a su destino final manteniendo su frescura, calidad y sabor gracias a todo el proceso anterior.",
+    icono: null,
+  },
 ];
+
 ---
 
 <Layout title="JJUGOS">
   <Proceso />
 
-  <div class="wrapper ">
+  <div class="wrapper">
     <div class="container">
       <h1 class="text-center text-[clamp(2.125rem,1.142rem+3.659vw,4rem)] font-bold leading-none text-black">
-        Proceso de producción        
-        </h1>
+        Proceso de producción
+      </h1>
       <h2 class="text-center text-2xl font-bold leading-none text-black">
         Conoce el proceso de producción de nuestros jugos.
-
       </h2>
     </div>
     <div class="steps">
-      <div class="level left">
-        <div class="steps-content">
-          <PasosProcess
-            nombre={pasos[0].nombre}
-            imagen={pasos[0].imagen}
-            texto={pasos[0].texto}
-            client:visible
-          />
+      {pasos.map((paso, index) => (
+        <div class={`level ${index % 2 === 0 ? "left" : "right"}`}>
+          <div class="steps-content">
+            <PasosProcess
+              nombre={paso.nombre}
+              imagen={paso.imagen}
+              texto={paso.texto}
+              client:visible
+            />
+          </div>
+          <div class="steps-count" data-index={index + 1}></div>
         </div>
-        <div class="steps-count">
-          <Numero1 />
-        </div>
-      </div>
-      <div class="level right">
-        <div class="steps-content">
-          <PasosProcess
-            nombre={pasos[1].nombre}
-            imagen={pasos[1].imagen}
-            texto={pasos[1].texto}
-            client:visible
-          />
-        </div>
-        <div class="steps-count">
-          <Numero2 />
-        </div>
-      </div>
-      <div class="level left">
-        <div class="steps-content">
-          <PasosProcess
-            nombre={pasos[2].nombre}
-            imagen={pasos[2].imagen}
-            texto={pasos[2].texto}
-            client:visible
-          />
-        </div>
-        <div class="steps-count">
-          <Numero3 />
-        </div>
-      </div>
-      <div class="level right">
-        <div class="steps-content">
-          <PasosProcess
-            nombre={pasos[3].nombre}
-            imagen={pasos[3].imagen}
-            texto={pasos[3].texto}
-            client:visible
-          />
-        </div>
-        <div class="steps-count">
-          <Numero4 />
-        </div>
-      </div>
-      <div class="level left">
-        <div class="steps-content">
-          <PasosProcess
-            nombre={pasos[4].nombre}
-            imagen={pasos[4].imagen}
-            texto={pasos[4].texto}
-            client:visible
-          />
-        </div>
-        <div class="steps-count">
-          <Numero5 />
-        </div>
-      </div>
+      ))}
     </div>
   </div>
 </Layout>
-
+</Layout>
 <style>
   .wrapper {
     max-width: "100%";
@@ -145,8 +143,27 @@ const pasos = [
     padding: 60px 0;
     position: relative;
   }
-  .level > * {
-    /* width: calc(50% - 45px); */
+
+  .steps-count {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    position: relative;
+  }
+
+  .steps-count::before {
+    content: attr(data-index);
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
   }
   .level:after {
     content: "";

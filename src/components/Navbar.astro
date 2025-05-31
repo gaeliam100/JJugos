@@ -41,9 +41,9 @@ const navItems = [
             </div>
         </nav>
         <div class="cs-contact-group">
-            <a href="tel:+84 1985 33 999" class="cs-phone">
+            <a href="tel:+52 56 1261 6133" class="cs-phone">
                 <img class="cs-phone-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/phone-1a.svg" alt="logo" width="24" height="24" aria-hidden="true" decoding="async">
-                +84 1985 33 999
+                +52 56 1261 6133
             </a>
             <div class="cs-social">
                 <ButtonContact />
@@ -662,5 +662,19 @@ body {
         }
         item.addEventListener('click', onClick)
         }
+    
+    // Detecta la URL actual y asigna la clase 'cs-active' al enlace correspondiente
+    document.addEventListener('DOMContentLoaded', () => {
+        const currentPath = window.location.pathname;
+        const navLinks = document.querySelectorAll('#cs-navigation .cs-li-link');
+
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPath) {
+                link.classList.add('cs-active');
+            } else {
+                link.classList.remove('cs-active');
+            }
+        });
+    });
                                 
 </script>

@@ -49,7 +49,7 @@ const logos = [
 
 export default function MainBanner() {
   return (
-    <section className="mx-auto w-full max-w-6xl px-6 py-20 sm:py-32 lg:px-8 lg:py-40">
+    <section className="mx-auto w-full max-w-6xl my-6">
       <ScrollingBanner shouldPauseOnHover gap="40px">
         {logos.map(({key, logo}) => (
           <div key={key} className="flex items-center justify-center text-foreground">
