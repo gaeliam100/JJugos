@@ -4,14 +4,18 @@
         "nombre": "Jugo de Naranja",
         "titulo": "El Clásico Natural, Puro y Refrescante 🍊",
         "descripcion": "Disfruta del jugo de naranja 100% natural, hecho con las mejores frutas seleccionadas. Sin azúcares añadidos ni conservadores, es la opción perfecta para empezar tu día con energía y frescura.",
-        "color":"orange"
+        "color":"orange",
+        "imagenProducto":"public/img/Botellas/NARANJA.png",
+        "frutas": ["https://i.pinimg.com/originals/28/3e/53/283e53880ea4fd483c4968d89b143866.png"]
+        
       },
       {
         "nombre": "Jugo de Toronja",
         "titulo": "Sabor Cítrico, Saludable y Natural 🍋",
         "descripcion": "El jugo de toronja de JJ Jugos es la combinación perfecta de frescura y beneficios para tu salud. Su sabor natural, sin aditivos, es ideal para acompañar tus mañanas o comidas.",
         "color":"red",
-        "imagenProducto":"https://static.vecteezy.com/system/resources/previews/010/064/040/non_2x/realistic-cans-white-for-mock-up-soda-can-mock-up-free-png.png"
+        "imagenProducto":"public/img/Botellas/TORONJA.png",
+        "frutas": ["https://static.vecteezy.com/system/resources/previews/029/200/071/non_2x/watermelon-transparent-background-free-png.png"]
       },
       {
         "nombre": "Jugo de Limón",
@@ -19,15 +23,16 @@
         "imagenProducto":"https://static.vecteezy.com/system/resources/previews/010/064/040/non_2x/realistic-cans-white-for-mock-up-soda-can-mock-up-free-png.png",
         "descripcion": "Perfecto para preparar bebidas o disfrutar solo, nuestro jugo de limón es 100% natural y puro, elaborado con frutas de la más alta calidad."
       ,        "color":"green"
-      
+      , "frutas": ["https://static.vecteezy.com/system/resources/previews/010/064/040/non_2x/realistic-cans-white-for-mock-up-soda-can-mock-up-free-png.png"]
 
       },
       {
         "nombre": "Jugo de Mandarina",
         "titulo": "La Frescura de la Temporada, Directo a Tu Mesa 🍊",
-        "imagenProducto":"https://static.vecteezy.com/system/resources/previews/010/064/040/non_2x/realistic-cans-white-for-mock-up-soda-can-mock-up-free-png.png",
+        "imagenProducto":"public/img/Botellas/MANDARINA_B.png",
         "descripcion": "Solo por tiempo limitado, disfruta del sabor dulce y vibrante del jugo de mandarina, elaborado con frutas frescas y sin ningún aditivo. Perfecto para refrescar tus días."
       ,        "color":"orange"
+      , "frutas": ["https://static.vecteezy.com/system/resources/previews/010/064/040/non_2x/realistic-cans-white-for-mock-up-soda-can-mock-up-free-png.png"]
 
       },
       {
@@ -36,6 +41,7 @@
         "imagenProducto":"https://static.vecteezy.com/system/resources/previews/010/064/040/non_2x/realistic-cans-white-for-mock-up-soda-can-mock-up-free-png.png",
         "descripcion": "Nuestro jugo de zanahoria es la opción ideal para quienes buscan salud y sabor en un solo vaso. Natural, sin conservadores y lleno de vitaminas."
       ,        "color":"orange"
+      , "frutas": ["https://static.vecteezy.com/system/resources/previews/010/064/040/non_2x/realistic-cans-white-for-mock-up-soda-can-mock-up-free-png.png"]
 
       }
     ],
@@ -43,15 +49,15 @@
       {
         "nombre": "Naranja Mango",
         "titulo": "Dulzura Tropical con un Toque Cítrico 🥭🍊",
-        "imagenProducto":"https://static.vecteezy.com/system/resources/previews/010/064/040/non_2x/realistic-cans-white-for-mock-up-soda-can-mock-up-free-png.png",
+        "imagenProducto":"public/img/Botellas/NARANJA_MANGO_B.png",
         "descripcion": "El equilibrio perfecto entre el sabor dulce del mango y la frescura de la naranja. Este mix es ideal para revitalizar tus días."
-      ,        "color":"red"
+      , "color":"red"
 
       },
       {
         "nombre": "Naranja Guayaba",
         "titulo": "Sabor Tradicional con un Giro Cítrico 🍊🍐",
-        "imagenProducto":"https://static.vecteezy.com/system/resources/previews/010/064/040/non_2x/realistic-cans-white-for-mock-up-soda-can-mock-up-free-png.png",
+        "imagenProducto":"public/img/Botellas/NARANJA_GUAYABA.png",
         "descripcion": "La combinación de naranja y guayaba ofrece un mix lleno de nutrientes y sabor auténtico, ideal para disfrutar en cualquier momento."
       ,        "color":"red"
 
@@ -59,7 +65,7 @@
       {
         "nombre": "Naranja Frutos Rojos",
         "titulo": "Explosión de Sabores y Antioxidantes 🍓🍒🍊",
-        "imagenProducto":"https://static.vecteezy.com/system/resources/previews/010/064/040/non_2x/realistic-cans-white-for-mock-up-soda-can-mock-up-free-png.png",
+        "imagenProducto":"public/img/Botellas/FRUTOS_ROJOS_B.png",
         "descripcion": "Una mezcla vibrante de naranja y frutos rojos, perfecta para quienes buscan frescura y un boost saludable."
       ,        "color":"red"
 
@@ -67,7 +73,7 @@
       {
         "nombre": "Naranja con Base Verde",
         "titulo": "Sabor Saludable y Refrescante 🍍🌱",
-        "imagenProducto":"https://static.vecteezy.com/system/resources/previews/010/064/040/non_2x/realistic-cans-white-for-mock-up-soda-can-mock-up-free-png.png",
+        "imagenProducto":"public/img/Botellas/VERDE.png",
         "descripcion": "Una combinación única de naranja con ingredientes verdes que revitalizan tu cuerpo y mente. Ideal para quienes buscan bienestar natural."
       ,        "color":"red"
 
@@ -101,7 +107,7 @@
       {
         "nombre": "Guayaba",
         "titulo": "El Sabor de la Tradición Mexicana 🍐",
-        "imagenProducto":"https://static.vecteezy.com/system/resources/previews/010/064/040/non_2x/realistic-cans-white-for-mock-up-soda-can-mock-up-free-png.png",
+        "imagenProducto":"public/img/Botellas/NARANJA_GUAYABA.png",
         "descripcion": "Elaborado con guayabas frescas, este jugo es una mezcla de dulzura y frescura, ideal para disfrutar solo o en compañía."
         ,"color":"red"
 

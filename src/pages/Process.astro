@@ -12,84 +12,84 @@ import Proceso from "../components/Proceso";
 const pasos = [
   {
     nombre: "LLEGADA DE NARANJA",
-    imagen: "https://placehold.co/400x400",
+    imagen: "/img/PROCESO/01.jpg",
     texto:
       "Las naranjas llegan desde campos certificados, listas para ser procesadas bajo estrictos controles de calidad.",
     icono: Numero1,
   },
   {
     nombre: "LAVADO",
-    imagen: "https://placehold.co/400x400",
+    imagen: "/img/PROCESO/02.jpg",
     texto:
       "Se realiza un lavado automatizado con agua potable y cepillos rotativos para remover tierra, pesticidas y residuos.",
     icono: Numero2,
   },
   {
     nombre: "SELECCIÓN POR TAMAÑO",
-    imagen: "https://placehold.co/400x400",
+    imagen: "/img/PROCESO/03.jpg",
     texto:
       "Las frutas se clasifican mecánicamente por tamaño para asegurar una extracción uniforme y eficiente.",
     icono: Numero3,
   },
   {
     nombre: "EXTRACCIÓN EQUIPO FMC",
-    imagen: "https://placehold.co/400x400",
+    imagen: "/img/PROCESO/04.jpg",
     texto:
       "Las naranjas pasan al extractor FMC que obtiene el jugo separando cáscara, pulpa y semillas sin alterar el sabor.",
     icono: Numero4,
   },
   {
     nombre: "LLENADO DE TANQUE",
-    imagen: "https://placehold.co/400x400",
+    imagen: "/img/PROCESO/05.jpg",
     texto:
       "El jugo recién extraído se transfiere a tanques de acero inoxidable donde se almacena temporalmente bajo condiciones sanitarias.",
     icono: Numero5,
   },
   {
     nombre: "PASTEURIZACIÓN",
-    imagen: "https://placehold.co/400x400",
+    imagen: "/img/PROCESO/06.jpg",
     texto:
       "El jugo es calentado a temperatura controlada para eliminar bacterias y conservar sus propiedades nutricionales.",
     icono: null,
   },
   {
     nombre: "LLENADO EN ENVASE",
-    imagen: "https://placehold.co/400x400",
+    imagen: "/img/PROCESO/07.jpg",
     texto:
       "Se llena automáticamente cada envase con jugo pasteurizado, en una línea de producción higiénica y de alta precisión.",
     icono: null,
   },
   {
     nombre: "CODIFICADO",
-    imagen: "https://placehold.co/400x400",
+    imagen: "/img/PROCESO/08.jpg",
     texto:
       "Cada envase se marca con número de lote y fecha de caducidad para asegurar trazabilidad y control de calidad.",
     icono: null,
   },
   {
     nombre: "EMPACADO",
-    imagen: "https://placehold.co/400x400",
+    imagen: "/img/PROCESO/09.jpg",
     texto:
       "Los envases codificados se agrupan, embalan y organizan en pallets para su fácil almacenamiento y transporte.",
     icono: null,
   },
   {
     nombre: "CÁMARA DE FRÍO",
-    imagen: "https://placehold.co/400x400",
+    imagen: "/img/PROCESO/10.jpg",
     texto:
       "Los productos son almacenados en cámaras de refrigeración para mantener la frescura del jugo hasta su distribución.",
     icono: null,
   },
   {
     nombre: "EMBARCAR",
-    imagen: "https://placehold.co/400x400",
+    imagen: "/img/PROCESO/11.jpg",
     texto:
       "El producto empaquetado se carga en vehículos con control de temperatura para iniciar su entrega a los clientes.",
     icono: null,
   },
   {
     nombre: "ENVÍO",
-    imagen: "https://placehold.co/400x400",
+    imagen: "/img/PROCESO/12.jpg",
     texto:
       "El jugo natural llega a su destino final manteniendo su frescura, calidad y sabor gracias a todo el proceso anterior.",
     icono: null,
@@ -99,18 +99,35 @@ const pasos = [
 ---
 
 <Layout title="JJUGOS">
-  <Proceso />
+  <div class="wrapper mt-[150px] relative overflow-hidden bg-gradient-to-br from-orange-50 via-white to-amber-50 py-16 px-4">
+    <div class="relative overflow-hidden">
+      <div class="relative max-w-4xl mx-auto">
+        {/* Badge */}
+        <div class="flex justify-center mb-6">
+          <span class="inline-flex items-center px-4 py-2 bg-orange-100 text-orange-800 text-sm font-semibold rounded-full border border-orange-200">
+            🍊 Calidad Premium
+          </span>
+        </div>
 
-  <div class="wrapper">
-    <div class="container">
-      <h1 class="text-center text-[clamp(2.125rem,1.142rem+3.659vw,4rem)] font-bold leading-none text-black">
-        Proceso de producción
-      </h1>
-      <h2 class="text-center text-2xl font-bold leading-none text-black">
-        Conoce el proceso de producción de nuestros jugos.
-      </h2>
+        {/* Main heading with enhanced styling */}
+        <h1 class="text-center text-[clamp(2.5rem,1.5rem+4vw,5rem)] font-black leading-none bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500 bg-clip-text text-transparent mb-4">
+          Proceso de producción
+        </h1>
+
+        {/* Subtitle with better spacing */}
+        <h2 class="text-center text-2xl md:text-3xl font-bold leading-tight text-gray-800 mb-6">
+          Conoce el proceso de producción de nuestros jugos.
+        </h2>
+
+        {/* Description with improved typography */}
+        <p class="text-center text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
+          Desde la llegada de las naranjas hasta el envío del producto final, cada paso está diseñado para garantizar la
+          <span class="font-semibold text-orange-600"> máxima calidad</span> y
+          <span class="font-semibold text-orange-600"> frescura</span>.
+        </p>
+      </div>
     </div>
-    <div class="steps">
+    <div class="steps ">
       {pasos.map((paso, index) => (
         <div class={`level ${index % 2 === 0 ? "left" : "right"}`}>
           <div class="steps-content">
@@ -130,10 +147,7 @@ const pasos = [
 </Layout>
 <style>
   .wrapper {
-    max-width: "100%";
     width: 100%;
-    padding: 60px 30px;
-    margin: 0 auto;
   }
 
   .level {
@@ -150,11 +164,10 @@ const pasos = [
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f0f0f0;
-    border-radius: 50%;
+    border-radius: 100%;
     font-size: 24px;
     font-weight: bold;
-    color: #000;
+    color: whitesmoke;
     position: relative;
   }
 
@@ -163,7 +176,7 @@ const pasos = [
     position: absolute;
     font-size: 24px;
     font-weight: bold;
-    color: #000;
+    color: whitesmoke;
   }
   .level:after {
     content: "";
@@ -176,7 +189,7 @@ const pasos = [
     position: absolute;
     width: 2px;
     height: 100%;
-    z-index: -1;
+    z-index: 0;
     background-color: #000;
     transform: translateX(-50%);
   }
@@ -195,7 +208,7 @@ const pasos = [
     width: 50%;
     height: 2px;
     background-color: #000;
-    z-index: -1;
+    z-index: 0;
   }
   .level.right {
     flex-direction: row-reverse;
@@ -245,6 +258,9 @@ const pasos = [
     display: flex;
     background-color: transparent;
     border-radius: 50%;
+        background-color: #00a35a;
+        
+
   }
 
   .steps-content {
@@ -276,6 +292,6 @@ const pasos = [
     width: 50%;
     height: 2px;
     background-color: #000;
-    z-index: -1;
+    z-index: 0;
   }
 </style>

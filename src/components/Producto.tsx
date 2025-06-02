@@ -52,52 +52,26 @@ export const ProductCard: React.FC<ProcutoProps> = ({ data }) => {
             removeWrapper
             alt="Card example background"
             className="z-0 w-full h-[300px]  object-contain"
-            src="https://static.vecteezy.com/system/resources/previews/010/064/040/non_2x/realistic-cans-white-for-mock-up-soda-can-mock-up-free-png.png"
+            src={data.imagenProducto || "https://i.pinimg.com/originals/28/3e/53/283e53880ea4fd483c4968d89b143866.png"}
           />
           <motion.div
-            className="card__fruit absolute w-24 h-32"
-            variants={{
-              initial: { scale: 0, x: 0, y: 0, opacity: 0 },
-              hover: { scale: 1, x: -50, y: -80, opacity: 1 }
-            }}
-            transition={{ type: "spring", stiffness: 200 }}
+            className="card__fruit-container absolute"
           >
-            <Image
-              alt=""
-              className="object-cover"
-              src="https://i.pinimg.com/originals/28/3e/53/283e53880ea4fd483c4968d89b143866.png"
-            />
+            {data.frutas?.map((fruta, index) => (
+              <motion.div
+                key={index}
+                className="card__fruit absolute w-24 h-32"
+                variants={{
+                  initial: { scale: 0, x: 0, y: 0, opacity: 0 },
+                  hover: { scale: 1, x: index * 50 - 50, y: -80 + index * 20, opacity: 1 }
+                }}
+                transition={{ type: "spring", stiffness: 200 }}
+              >
+                <Image alt={`Fruta ${index + 1}`} className="object-cover" src={fruta} />
+              </motion.div>
+            ))}
           </motion.div>
 
-          <motion.div
-            className="card__fruit absolute w-24 h-32"
-            variants={{
-              initial: { scale: 0, x: 0, y: 0, opacity: 0 },
-              hover: { scale: 1, x: 50, y: -60, opacity: 1 }
-            }}
-            transition={{ type: "spring", stiffness: 200 }}
-          >
-            <Image
-              alt=""
-              className="object-cover"
-              src="https://static.vecteezy.com/system/resources/previews/029/200/071/non_2x/watermelon-transparent-background-free-png.png"
-            />
-          </motion.div>
-
-          <motion.div
-            className="card__fruit absolute w-24 h-32"
-            variants={{
-              initial: { scale: 0, x: 0, y: 0, opacity: 0 },
-              hover: { scale: 1, x: 0, y: 60, opacity: 1 }
-            }}
-            transition={{ type: "spring", stiffness: 200 }}
-          >
-            <Image
-              alt=""
-              className="object-cover"
-              src="https://i.pinimg.com/originals/28/3e/53/283e53880ea4fd483c4968d89b143866.png"
-            />
-          </motion.div>
           <CardFooter className="absolute flex flex-col bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
               <h4 className="text-gray-700 text-left  text-base flex-1">{data.titulo}</h4>
             <div>

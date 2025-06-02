@@ -16,110 +16,22 @@ interface Props {
   options?: string[];
   color: string;
 }
-const selectIndustria = [
+const selectMotivo = [
   {
-    value: "Alimentos",
-    label: "Alimentos",
+    value: "Pedido",
+    label: "Pedido de jugos",
   },
   {
-    value: "Artículos de papelería",
-    label: "Artículos de papelería",
+    value: "Consulta",
+    label: "Consulta general",
   },
   {
-    value: "Artículos del Hogar",
-    label: "Artículos del Hogar",
+    value: "Sugerencia",
+    label: "Sugerencia o comentario",
   },
   {
-    value: "Artículos Ferreteros",
-    label: "Artículos Ferreteros",
-  },
-  {
-    value: "Automotriz",
-    label: "Automotriz",
-  },
-  {
-    value: "Cuidado Personal",
-    label: "Cuidado Personal",
-  },
-  {
-    value: "Farmacéutica",
-    label: "Farmacéutica",
-  },
-  {
-    value: "Filamentos",
-    label: "Filamentos",
-  },
-  {
-    value: "Productos de Limpieza",
-    label: "Productos de Limpieza",
-  },
-  {
-    value: "Otros",
-    label: "Otros",
-  },
-];
-const selectResina = [
-  {
-    value: "ABS",
-    label: "ABS",
-  },
-  {
-    value: "PET",
-    label: "PET",
-  },
-  {
-    value: "Polietileno",
-    label: "Polietileno",
-  },
-  {
-    value: "Polipropileno",
-    label: "Polipropileno",
-  },
-  {
-    value: "5",
-    label: "PS",
-  },
-  {
-    value: "PS/PSC",
-    label: "PS/PSC",
-  },
-  {
-    value: "PVC",
-    label: "PVC",
-  },
-  {
-    value: "SAN",
-    label: "SAN",
-  },
-];
-const selectProcess = [
-  {
-    value: "Extrusión",
-    label: "Extrusión",
-  },
-  {
-    value: "Extrusión Soplo",
-    label: "Extrusión Soplo",
-  },
-  {
-    value: "Inyección",
-    label: "Inyección",
-  },
-  {
-    value: "Inyección Soplo",
-    label: "Inyección Soplo",
-  },
-  {
-    value: "Rotomoldeo",
-    label: "Rotomoldeo",
-  },
-  {
-    value: "Termoformado",
-    label: "Termoformado",
-  },
-  {
-    value: "Otros",
-    label: "Otros",
+    value: "Otro",
+    label: "Otro",
   },
 ];
 ---
@@ -139,17 +51,17 @@ const selectProcess = [
       </header>
       <div class="flex flex-col min-h-screen w-full">
         <form
-          id="principalForm"
+          id="contactForm"
           class="min-h-screen flex flex-col justify-around"
         >
-          <div class="flex justify-between w-full gap-1">
+          <div class="flex justify-between w-full gap-3">
             <FormInput
               labelTitle="Nombre"
               inputName="Nombre"
               inputType="text"
               isRequired
-              pattern="[a-zA-Z0-9]+"
-              title="Solo letras y números"
+              pattern="[a-zA-Z ]+"
+              title="Solo letras"
               maxlength="40"
             />
             <FormInput
@@ -157,8 +69,8 @@ const selectProcess = [
               inputName="Apellido"
               inputType="text"
               isRequired
-              pattern="[a-zA-Z0-9]+"
-              title="Solo letras y números"
+              pattern="[a-zA-Z ]+"
+              title="Solo letras"
               maxlength="40"
             />
           </div>
@@ -169,61 +81,45 @@ const selectProcess = [
               inputType="email"
               isRequired
               pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
-              title="Ingresa un email que sea corrrecto"
+              title="Ingresa un email válido"
               maxlength="50"
             />
             <FormInput
               labelTitle="Teléfono"
               inputName="Teléfono"
-              inputType="phone"
+              inputType="tel"
               isRequired
               pattern="[0-9]{10}"
-              title="asegurate que sea un teléfono"
+              title="Ingresa un número de teléfono válido (10 dígitos)"
               maxlength="10"
             />
           </div>
           <div class="flex justify-between w-full gap-3">
             <FormInput
-              labelTitle="Empresa"
+              labelTitle="Empresa (opcional)"
               inputName="Empresa"
               inputType="text"
-              pattern="[a-zA-Z0-9]+"
-              isRequired
+              pattern="[a-zA-Z0-9 ]+"
               title="Solo letras y números"
               maxlength="40"
             />
             <SelectForm
-              labelTitle="Industria"
-              nameSelect="UserInd"
-              options={selectIndustria}
-              isRequired
-            />
-          </div>
-          <div class="flex justify-between w-full gap-3">
-            <FormInput
-              labelTitle="Resina en la que Trabajas"
-              inputName="resina"
-              inputType="text"
-              isRequired
-              pattern="[a-zA-Z0-9]+"
-            />
-            <SelectForm
-              labelTitle="Tipo de proceso"
-              nameSelect="UserInd"
-              options={selectProcess}
+              labelTitle="Motivo de contacto"
+              nameSelect="Motivo"
+              options={selectMotivo}
               isRequired
             />
           </div>
           <TextAreaForm
             labeTitle="Mensaje"
             inputName="Mensaje"
-            rows="2"
+            rows="4"
             required
           />
           <div
             class="flex flex-col items-center justify-center lg:justify-start"
           >
-            <Button type="submit" />
+            <Button type="submit" title="Enviar" />
             <Loader />
           </div>
         </form>

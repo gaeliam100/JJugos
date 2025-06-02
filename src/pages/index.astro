@@ -4,8 +4,8 @@ import Hero from "../components/Hero.astro";
 import FinalCta from "../components/FinalCta.astro";
 import Certificado from "../components/Certificado.astro";
 import SubSection from "../components/SubSection.astro";
-import Bento from "../components/Bento.astro";
 import LandingCards from "../components/LandingCards";
+import { JuiceShowcase } from "../components/JuiceShowcase";
 
 const certificados = [
   {
@@ -26,7 +26,7 @@ const certificados = [
         link: "https://es.wikipedia.org/wiki/Kosher",
       },
     ],
-    image: "/img/certificado-kosher.png",
+    image: "public/img/certificados/1.png",
   },
   {
     title: "FSSC 22000 Garantía de Calidad que Mereces 🌍",
@@ -46,7 +46,7 @@ const certificados = [
         link: "https://www.fssc22000.com/",
       },
     ],
-    image: "/img/certificado-fssc-22000.png",
+    image: "public/img/certificados/2.png",
   },
 ];
 ---
@@ -69,7 +69,7 @@ const certificados = [
    list={certificados[1].list}
    image={certificados[1].image}
  />
-  <Bento />
+  <JuiceShowcase client:visible />
   <FinalCta />
 </Layout>
 
