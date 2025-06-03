@@ -38,7 +38,7 @@ rounded-b-large backdrop-blur
             removeWrapper
             alt="Card background"
             className="z-0 w-full h-full object-cover"
-            src="public/img/TerceraSeccion/1.png"
+            src="/img/TerceraSeccion/1.png"
           />
         </Card>
         <Card
@@ -62,7 +62,7 @@ rounded-b-large backdrop-blur
             removeWrapper
             alt="Card background"
             className="z-0 w-full h-full object-cover"
-            src="public/img/TerceraSeccion/2.png"
+            src="/img/TerceraSeccion/2.png"
           />
         </Card>
         <Card isPressable className="col-span-12 sm:col-span-4 h-[440px]">
@@ -84,7 +84,7 @@ rounded-b-large backdrop-blur
             removeWrapper
             alt="Card background"
             className="z-0 w-full h-full object-cover"
-            src="public/img/TerceraSeccion/3.png"
+            src="/img/TerceraSeccion/3.png"
           />
         </Card>
       </div>
