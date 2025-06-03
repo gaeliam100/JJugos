@@ -58,7 +58,7 @@ export const ProductCard: React.FC<ProcutoProps> = ({ data }) => {
             {data.frutas?.map((fruta, index) => (
               <motion.div
                 key={index}
-                className="card__fruit absolute left-4 top-4 w-20 h-20"
+                className="card__fruit absolute left-4 top-4 w-32 h-32"
                 variants={{
                   initial: { scale: 0, opacity: 0, x: 0, y: 0 },
                   hover: {

@@ -1,4 +1,5 @@
 import { Card, CardHeader, CardFooter, Image, Button } from "@heroui/react";
+import { a } from "framer-motion/client";
 
 /*
 p-3 h-auto flex w-full items-center 
@@ -14,11 +15,12 @@ export default function LandingCards() {
         Explora nuestras iniciativas
       </h2>
       <div className="flex flex-wrap gap-4 px-8 justify-center">
-
         <Card
+                as={a}
+        href="/Product"
           isPressable
           isFooterBlurred
-          className="col-span-12 sm:col-span-4 h-[440px]"
+          className="col-span-12 sm:col-span-4 h-[440px] max-w-[400px] relative"
         >
           <CardHeader
             className="absolute z-10 top-0 flex-col !items-start  bg-black/40  border-t-1 border-default-600 dark:border-default-100 p-3 h-auto flex w-full 
@@ -41,9 +43,10 @@ rounded-b-large backdrop-blur
             src="/img/TerceraSeccion/1.png"
           />
         </Card>
-        <Card
-        
-        isPressable className="col-span-12 sm:col-span-4 h-[440px]">
+        <Card 
+                as={a}
+        href="/Product"
+        isPressable className="col-span-12 sm:col-span-4 h-[440px] max-w-[400px] relative">
           <CardHeader
             className="absolute z-10 top-0 flex-col !items-start  bg-black/40  border-t-1 border-default-600 dark:border-default-100 p-3 h-auto flex w-full 
 overflow-hidden color-inherit 
@@ -65,7 +68,10 @@ rounded-b-large backdrop-blur
             src="/img/TerceraSeccion/2.png"
           />
         </Card>
-        <Card isPressable className="col-span-12 sm:col-span-4 h-[440px]">
+        <Card
+        as={a}
+        href="/Product"
+        isPressable className="col-span-12 sm:col-span-4 h-[440px] max-w-[400px] relative">
           <CardHeader
             className="absolute z-10 top-0 flex-col !items-start  bg-black/40  border-t-1 border-default-600 dark:border-default-100 p-3 h-auto flex w-full 
 overflow-hidden color-inherit 

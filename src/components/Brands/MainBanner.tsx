@@ -69,7 +69,7 @@ export default function MainBanner() {
             <img
               src={src}
               alt={`Logo ${key}`}
-              className="h-full w-full min-w-[90px] object-contain"
+              className="h-full w-full min-w-[120px] object-contain"
             />
           </div>
         ))}

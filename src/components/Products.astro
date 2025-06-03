@@ -15,12 +15,12 @@ class="text-center w-full"
   <MainTitle  title="Conoce Nuestros Productos" />
 </section>
 
-<div class="w-full px-24">
+<div class="w-full px-4 lg:px-24">
     {Object.entries(productos).map(([categoria, items]) => (
       <section
       class="w-full flex flex-col items-center justify-center my-10"
       >
-        <h2 class="text-foreground sm:text-6xl text-4xl uppercase">{categoria.replaceAll('_', ' ')}</h2>
+        <h2 class="text-foreground sm:text-6xl text-4xl uppercase text-center">{categoria.replaceAll('_', ' ')}</h2>
       </section>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {items.map(producto => (

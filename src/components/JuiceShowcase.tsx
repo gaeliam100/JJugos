@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, CardBody, Divider, Button } from "@heroui/react";
 import { Icon } from "@iconify/react";
+import { a } from "framer-motion/client";
 
 export const JuiceShowcase: React.FC = () => {
   return (
@@ -38,14 +39,14 @@ export const JuiceShowcase: React.FC = () => {
                       Haz de JJugos el favorito de tus clientes
                     </h3>
                     <p className="text-gray-600 mb-4">
-                      ¿Buscas un producto que enamore a tus clientes? Nuestros jugos 
-                      100% naturales son perfectos para restaurantes y cafeterías.
+                       Nuestros jugos 
+                      100% naturales son perfectos para restaurantes y cafeterías
                     </p>
                   </div>
                 <div className="relative h-full w-full">
                   <img
-                    className="object-cover rounded-b-xl"
-                    src="/img/Socios/3.png"
+                    className="object-cover rounded-b-xl w-full h-auto"
+                    src="/img/Socios/1.png"
                     alt="Oportunidad de distribución de jugos"
                   />
                 </div>
@@ -71,7 +72,7 @@ export const JuiceShowcase: React.FC = () => {
                 </div>
                 <div className="relative h-full w-full">
                   <img
-                    className="object-cover rounded-b-xl"
+                    className="object-cover rounded-b-xl w-full h-full"
                     src="/img/Socios/4.png"
                     alt="Oportunidad de distribución de jugos"
                   />
@@ -128,15 +129,19 @@ export const JuiceShowcase: React.FC = () => {
                   </p>
                   <div className="flex flex-wrap gap-4">
                     <Button 
+                    as={a}
+                      href="/AboutUs"
                       color="primary" 
                       size="lg"
                       className="bg-gradient-to-r from-orange-500 to-orange-600 text-white"
                       radius="full"
                       endContent={<Icon icon="lucide:arrow-right" />}
                     >
-                      Nuestra historia
+                      Nosotros
                     </Button>
                     <Button 
+                    as={a}
+                      href="/Product"
                       variant="flat" 
                       color="primary"
                       size="lg"
@@ -149,7 +154,7 @@ export const JuiceShowcase: React.FC = () => {
                 </div>
                 <div className="relative h-full min-h-[300px] md:min-h-[400px]">
                   <img
-                    className="h-full w-full object-cover md:rounded-r-xl"
+                    className="h-full w-full object-contain md:object-cover md:rounded-r-xl"
                     src="/img/Socios/3.png"
                     alt="La pasión detrás de JJugos"
                   />
@@ -162,6 +167,8 @@ export const JuiceShowcase: React.FC = () => {
         {/* Call to Action */}
         <div className="mt-20 text-center">
           <Button 
+          as={a}
+            href="/Contact"
             size="lg" 
             color="primary" 
             className="bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg hover:shadow-xl transition-all"
