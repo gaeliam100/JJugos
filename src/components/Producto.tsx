@@ -27,10 +27,10 @@ export const ProductCard: React.FC<ProcutoProps> = ({ data }) => {
         initial="initial"
         whileHover="hover"
         animate="initial"
-        transition={{ type: "spring", stiffness: 300 }}
+        transition={{ type: "spring", stiffness: 300, damping: 20 }}
         variants={{
           initial: { scale: 1, rotate: 0 },
-          hover: { scale: 1.05, rotate: 0.5 }
+          hover: { scale: 1.03, rotate: -1 }
         }}
       >
         <Card
@@ -41,7 +41,7 @@ export const ProductCard: React.FC<ProcutoProps> = ({ data }) => {
           }}
         >
 
-          <CardHeader className="absolute z-10 top-1 flex-col items-start">
+          <CardHeader className="absolute z-10 top-1 flex-col items-end">
           <Chip 
             style={{
               background:data.color
@@ -54,18 +54,26 @@ export const ProductCard: React.FC<ProcutoProps> = ({ data }) => {
             className="z-0 w-full h-[300px]  object-contain"
             src={data.imagenProducto || "https://i.pinimg.com/originals/28/3e/53/283e53880ea4fd483c4968d89b143866.png"}
           />
-          <motion.div
-            className="card__fruit-container absolute"
-          >
+          <motion.div className="card__fruit-container absolute">
             {data.frutas?.map((fruta, index) => (
               <motion.div
                 key={index}
-                className="card__fruit absolute w-24 h-32"
+                className="card__fruit absolute left-4 top-4 w-20 h-20"
                 variants={{
-                  initial: { scale: 0, x: 0, y: 0, opacity: 0 },
-                  hover: { scale: 1, x: index * 50 - 50, y: -80 + index * 20, opacity: 1 }
+                  initial: { scale: 0, opacity: 0, x: 0, y: 0 },
+                  hover: {
+                    scale: 1,
+                    opacity: 1,
+                    ...(index === 0
+                      ? { x: -60, y: -60 }     // arriba izquierda
+                      : index === 1
+                      ? { x: 60, y: -60 }      // arriba derecha
+                      : index === 2
+                      ? { x: -60, y: 60 }      // abajo izquierda
+                      : { x: 60, y: 60 })      // abajo derecha
+                  }
                 }}
-                transition={{ type: "spring", stiffness: 200 }}
+                transition={{ type: "spring", stiffness: 260, damping: 20 }}
               >
                 <Image alt={`Fruta ${index + 1}`} className="object-cover" src={fruta} />
               </motion.div>
