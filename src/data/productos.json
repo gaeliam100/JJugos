@@ -5,7 +5,7 @@
       "titulo": "El Clásico Natural, Puro y Refrescante 🍊",
       "descripcion": "Disfruta del jugo de naranja 100% natural, hecho con las mejores frutas seleccionadas. Sin azúcares añadidos ni conservadores, es la opción perfecta para empezar tu día con energía y frescura.",
       "color": "orange",
-      "imagenProducto": "public/img/Botellas/NARANJA.png",
+      "imagenProducto": "/img/Botellas/NARANJA.png",
       "frutas": [
         "/img/Frutas/NARANJA.png",
         "/img/Frutas/NARANJA_2.png",
@@ -17,7 +17,7 @@
       "titulo": "Sabor Cítrico, Saludable y Natural 🍋",
       "descripcion": "El jugo de toronja de JJ Jugos es la combinación perfecta de frescura y beneficios para tu salud. Su sabor natural, sin aditivos, es ideal para acompañar tus mañanas o comidas.",
       "color": "red",
-      "imagenProducto": "public/img/Botellas/TORONJA.png",
+      "imagenProducto": "/img/Botellas/TORONJA.png",
       "frutas": [
         "/img/Frutas/TORONJA.png",
         "/img/Frutas/TORONJA_2.png",
@@ -39,7 +39,7 @@
     {
       "nombre": "Jugo de Mandarina",
       "titulo": "La Frescura de la Temporada, Directo a Tu Mesa 🍊",
-      "imagenProducto": "public/img/Botellas/MANDARINA_B.png",
+      "imagenProducto": "/img/Botellas/MANDARINA_B.png",
       "descripcion": "Solo por tiempo limitado, disfruta del sabor dulce y vibrante del jugo de mandarina, elaborado con frutas frescas y sin ningún aditivo. Perfecto para refrescar tus días.",
       "color": "orange",
       "frutas": [
@@ -66,7 +66,7 @@
     {
       "nombre": "Naranja Mango",
       "titulo": "Dulzura Tropical con un Toque Cítrico 🥭🍊",
-      "imagenProducto": "public/img/Botellas/NARANJA_MANGO_B.png",
+      "imagenProducto": "/img/Botellas/NARANJA_MANGO_B.png",
       "descripcion": "El equilibrio perfecto entre el sabor dulce del mango y la frescura de la naranja. Este mix es ideal para revitalizar tus días.",
       "color": "red",
       "frutas": [
@@ -77,7 +77,7 @@
     {
       "nombre": "Naranja Guayaba",
       "titulo": "Sabor Tradicional con un Giro Cítrico 🍊🍐",
-      "imagenProducto": "public/img/Botellas/NARANJA_GUAYABA.png",
+      "imagenProducto": "/img/Botellas/NARANJA_GUAYABA.png",
       "descripcion": "La combinación de naranja y guayaba ofrece un mix lleno de nutrientes y sabor auténtico, ideal para disfrutar en cualquier momento.",
       "color": "red",
       "frutas": [
@@ -88,7 +88,7 @@
     {
       "nombre": "Naranja Frutos Rojos",
       "titulo": "Explosión de Sabores y Antioxidantes 🍓🍒🍊",
-      "imagenProducto": "public/img/Botellas/FRUTOS_ROJOS_B.png",
+      "imagenProducto": "/img/Botellas/FRUTOS_ROJOS_B.png",
       "descripcion": "Una mezcla vibrante de naranja y frutos rojos, perfecta para quienes buscan frescura y un boost saludable.",
       "color": "red",
       "frutas": [
@@ -99,7 +99,7 @@
     {
       "nombre": "Naranja con Base Verde",
       "titulo": "Sabor Saludable y Refrescante 🍍🌱",
-      "imagenProducto": "public/img/Botellas/VERDE.png",
+      "imagenProducto": "/img/Botellas/VERDE.png",
       "descripcion": "Una combinación única de naranja con ingredientes verdes que revitalizan tu cuerpo y mente. Ideal para quienes buscan bienestar natural.",
       "color": "red",
       "frutas": ["/img/Frutas/JUGO_VERDE.png"]
@@ -131,7 +131,7 @@
     {
       "nombre": "Guayaba",
       "titulo": "El Sabor de la Tradición Mexicana 🍐",
-      "imagenProducto": "public/img/Botellas/NARANJA_GUAYABA.png",
+      "imagenProducto": "/img/Botellas/NARANJA_GUAYABA.png",
       "descripcion": "Elaborado con guayabas frescas, este jugo es una mezcla de dulzura y frescura, ideal para disfrutar solo o en compañía.",
       "color": "red"
     },
