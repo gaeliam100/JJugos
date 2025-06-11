@@ -20,7 +20,7 @@ export default function LandingCards() {
         href="/Product"
           isPressable
           isFooterBlurred
-          className="col-span-12 sm:col-span-4 h-[440px] max-w-[400px] relative"
+          className="col-span-12 bounce-in sm:col-span-4 h-[440px] max-w-[400px] relative"
         >
           <CardHeader
             className="absolute z-10 top-0 flex-col !items-start  bg-black/40  border-t-1 border-default-600 dark:border-default-100 p-3 h-auto flex w-full 
@@ -46,7 +46,7 @@ rounded-b-large backdrop-blur
         <Card 
                 as={a}
         href="/Product"
-        isPressable className="col-span-12 sm:col-span-4 h-[440px] max-w-[400px] relative">
+        isPressable className="col-span-12 bounce-in sm:col-span-4 h-[440px] max-w-[400px] relative">
           <CardHeader
             className="absolute z-10 top-0 flex-col !items-start  bg-black/40  border-t-1 border-default-600 dark:border-default-100 p-3 h-auto flex w-full 
 overflow-hidden color-inherit 
@@ -71,7 +71,7 @@ rounded-b-large backdrop-blur
         <Card
         as={a}
         href="/Product"
-        isPressable className="col-span-12 sm:col-span-4 h-[440px] max-w-[400px] relative">
+        isPressable className="col-span-12 bounce-in sm:col-span-4 h-[440px] max-w-[400px] relative">
           <CardHeader
             className="absolute z-10 top-0 flex-col !items-start  bg-black/40  border-t-1 border-default-600 dark:border-default-100 p-3 h-auto flex w-full 
 overflow-hidden color-inherit 

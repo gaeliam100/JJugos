@@ -23,11 +23,11 @@ export const JuiceShowcase: React.FC = () => {
         </div>
 
         {/* Main Grid - Restructured to 3 cards on top, 1 on bottom */}
-        <div className="mt-16 grid gap-6">
+        <div className="mt-16  grid gap-6">
           {/* Top Row - 3 equal cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Feature 1 */}
-            <Card className="overflow-visible" shadow="sm">
+            <Card className="overflow-visible fade-in-top" shadow="sm">
               <CardBody className="p-0 overflow-hidden">
                 <div className="relative h-full">
                   <div className="p-6 sm:p-8">
@@ -55,7 +55,7 @@ export const JuiceShowcase: React.FC = () => {
             </Card>
 
             {/* Feature 2 */}
-            <Card className="overflow-visible" shadow="sm">
+            <Card className="overflow-visible fade-in-top" shadow="sm">
               <CardBody className="p-0 overflow-hidden">
                 <div className="p-6 sm:p-8">
                   <div className="inline-flex items-center gap-2 bg-green-100 px-3 py-1 rounded-full mb-3">
@@ -81,7 +81,7 @@ export const JuiceShowcase: React.FC = () => {
             </Card>
 
             {/* Feature 3 */}
-            <Card className="overflow-visible" shadow="sm">
+            <Card className="overflow-visible fade-in-top" shadow="sm">
               <CardBody className="p-0 overflow-hidden">
                 <div className="p-6 sm:p-8">
                   <div className="inline-flex items-center gap-2 bg-blue-100 px-3 py-1 rounded-full mb-3">
@@ -107,7 +107,7 @@ export const JuiceShowcase: React.FC = () => {
             </Card>
           </div>
 
-          <Card className="overflow-visible mt-6" shadow="sm">
+          <Card className="overflow-visible mt-6 slide-in-bottom" shadow="sm">
             <CardBody className="p-0 overflow-hidden">
               <div className="grid md:grid-cols-2 h-full">
                 <div className="p-8 sm:p-10 flex flex-col justify-center">

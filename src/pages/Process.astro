@@ -6,8 +6,6 @@ import Numero3 from "../components/Numero3.astro";
 import Numero4 from "../components/Numero4.astro";
 import Numero5 from "../components/Numero5.astro";
 import Layout from "../layouts/Layout.astro";
-import Proceso from "../components/Proceso";
-
 /* Declarar los pasos */
 const pasos = [
   {
@@ -130,7 +128,7 @@ const pasos = [
     <div class="steps ">
       {pasos.map((paso, index) => (
         <div class={`level ${index % 2 === 0 ? "left" : "right"}`}>
-          <div class="steps-content">
+          <div class={`steps-content ${index % 2 === 0 ? "slide-in-left" : "slide-in-right"}`}>
             <PasosProcess
               nombre={paso.nombre}
               imagen={paso.imagen}
