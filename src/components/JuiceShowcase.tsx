@@ -46,7 +46,7 @@ export const JuiceShowcase: React.FC = () => {
                 <div className="relative h-full w-full">
                   <img
                     className="object-cover rounded-b-xl w-full h-auto"
-                    src="/img/Socios/1.png"
+                    src="/img/naturales_de_calidad_premium/1.png"
                     alt="Oportunidad de distribución de jugos"
                   />
                 </div>
@@ -99,7 +99,7 @@ export const JuiceShowcase: React.FC = () => {
                 <div className="relative h-full  w-full">
                   <img
                     className="h-full w-full object-cover rounded-b-xl"
-                    src="/img/Socios/3.png"
+                    src="/img/naturales_de_calidad_premium/2.png"
                     alt="Únete al equipo de JJugos"
                   />
                 </div>
@@ -155,7 +155,7 @@ export const JuiceShowcase: React.FC = () => {
                 <div className="relative h-full min-h-[300px] md:min-h-[400px]">
                   <img
                     className="h-full w-full object-contain md:object-cover md:rounded-r-xl"
-                    src="/img/Socios/3.png"
+                    src="/img/naturales_de_calidad_premium/3.png"
                     alt="La pasión detrás de JJugos"
                   />
                 </div>

@@ -4,14 +4,6 @@ import ScrollingBanner from "./scrolling-banner";
 
 const logos = [
   {
-    key: "logo-1",
-    src: "/img/clientes/LOGOSCLIENTES/LOGO_CERTIFICADO_FSSC.png",
-  },
-  {
-    key: "logo-2",
-    src: "/img/clientes/LOGOSCLIENTES/LOGO_CERTIFICADO_KOSHER.png",
-  },
-  {
     key: "logo-3",
     src: "/img/clientes/LOGOSCLIENTES/LOGO_FIESTA.png",
   },

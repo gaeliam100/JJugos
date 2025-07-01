@@ -24,16 +24,16 @@ const pasos = [
   },
   {
     nombre: "SELECCIÓN POR TAMAÑO",
-    imagen: "/img/PROCESO/03.jpg",
+    imagen: "/img/Naranjas2.jpg",
     texto:
       "Las frutas se clasifican mecánicamente por tamaño para asegurar una extracción uniforme y eficiente.",
     icono: Numero3,
   },
   {
-    nombre: "EXTRACCIÓN EQUIPO FMC",
-    imagen: "/img/PROCESO/04.jpg",
+    nombre: "EXTRACCIÓN EQUIPO EXZEL",
+    imagen: "/img/Extractor.jpg",
     texto:
-      "Las naranjas pasan al extractor FMC que obtiene el jugo separando cáscara, pulpa y semillas sin alterar el sabor.",
+      "Las naranjas pasan al extractor EXZEL que obtiene el jugo separando cáscara, pulpa y semillas sin alterar el sabor.",
     icono: Numero4,
   },
   {
@@ -59,7 +59,7 @@ const pasos = [
   },
   {
     nombre: "CODIFICADO",
-    imagen: "/img/PROCESO/08.jpg",
+    imagen: "/img/Lote1.jpg",
     texto:
       "Cada envase se marca con número de lote y fecha de caducidad para asegurar trazabilidad y control de calidad.",
     icono: null,
@@ -93,56 +93,70 @@ const pasos = [
     icono: null,
   },
 ];
-
 ---
 
 <Layout title="JJUGOS">
-  <div class="wrapper mt-[150px] relative overflow-hidden bg-gradient-to-br from-orange-50 via-white to-amber-50 py-16 px-4">
+  <div
+    class="wrapper mt-[150px] relative overflow-hidden bg-gradient-to-br from-orange-50 via-white to-amber-50 py-16 px-4"
+  >
     <div class="relative overflow-hidden">
       <div class="relative max-w-4xl mx-auto">
         {/* Badge */}
         <div class="flex justify-center mb-6">
-          <span class="inline-flex items-center px-4 py-2 bg-orange-100 text-orange-800 text-sm font-semibold rounded-full border border-orange-200">
+          <span
+            class="inline-flex items-center px-4 py-2 bg-orange-100 text-orange-800 text-sm font-semibold rounded-full border border-orange-200"
+          >
             🍊 Calidad Premium
           </span>
         </div>
 
         {/* Main heading with enhanced styling */}
-        <h1 class="text-center text-[clamp(2.5rem,1.5rem+4vw,5rem)] font-black leading-none bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500 bg-clip-text text-transparent mb-4">
+        <h1
+          class="text-center text-[clamp(2.5rem,1.5rem+4vw,5rem)] font-black leading-none bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500 bg-clip-text text-transparent mb-4"
+        >
           Proceso de producción
         </h1>
 
         {/* Subtitle with better spacing */}
-        <h2 class="text-center text-2xl md:text-3xl font-bold leading-tight text-gray-800 mb-6">
+        <h2
+          class="text-center text-2xl md:text-3xl font-bold leading-tight text-gray-800 mb-6"
+        >
           Conoce el proceso de producción de nuestros jugos.
         </h2>
 
         {/* Description with improved typography */}
-        <p class="text-center text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
-          Desde la llegada de las naranjas hasta el envío del producto final, cada paso está diseñado para garantizar la
+        <p
+          class="text-center text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8"
+        >
+          Desde la llegada de las naranjas hasta el envío del producto final,
+          cada paso está diseñado para garantizar la
           <span class="font-semibold text-orange-600"> máxima calidad</span> y
           <span class="font-semibold text-orange-600"> frescura</span>.
         </p>
       </div>
     </div>
-    <div class="steps ">
-      {pasos.map((paso, index) => (
-        <div class={`level ${index % 2 === 0 ? "left" : "right"}`}>
-          <div class={`steps-content ${index % 2 === 0 ? "slide-in-left" : "slide-in-right"}`}>
-            <PasosProcess
-              nombre={paso.nombre}
-              imagen={paso.imagen}
-              texto={paso.texto}
-              client:visible
-            />
+    <div class="steps">
+      {
+        pasos.map((paso, index) => (
+          <div class={`level ${index % 2 === 0 ? "left" : "right"}`}>
+            <div
+              class={`steps-content ${index % 2 === 0 ? "slide-in-left" : "slide-in-right"}`}
+            >
+              <PasosProcess
+                nombre={paso.nombre}
+                imagen={paso.imagen}
+                texto={paso.texto}
+                client:visible
+              />
+            </div>
+            <div class="steps-count" data-index={index + 1} />
           </div>
-          <div class="steps-count" data-index={index + 1}></div>
-        </div>
-      ))}
+        ))
+      }
     </div>
   </div>
 </Layout>
-</Layout>
+
 <style>
   .wrapper {
     width: 100%;
@@ -256,9 +270,7 @@ const pasos = [
     display: flex;
     background-color: transparent;
     border-radius: 50%;
-        background-color: #00a35a;
-        
-
+    background-color: #00a35a;
   }
 
   .steps-content {
