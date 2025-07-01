@@ -93,70 +93,58 @@ const pasos = [
     icono: null,
   },
 ];
+
 ---
 
 <Layout title="JJUGOS">
-  <div
-    class="wrapper mt-[150px] relative overflow-hidden bg-gradient-to-br from-orange-50 via-white to-amber-50 py-16 px-4"
-  >
-    <div class="relative overflow-hidden">
-      <div class="relative max-w-4xl mx-auto">
+  <div class="wrapper  relative overflow-hidden bg-gradient-to-br from-orange-50 via-white to-amber-50 ">
+    <div id="header" class="relative pt-24 overflow-hidden rounded-xl mb-16 min-h-[100dvh] flex items-center" style="background-image: url('/img/PROCESO/Fondo.png'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;">
+      <div class="relative max-w-4xl mx-auto p-12 px-6 py-10 sm:p-12 z-10 w-full">
+        {/* Glass effect - fondo de vidrio esmerilado */}
+        <div class="absolute inset-0 bg-white/70 backdrop-blur-sm rounded-xl shadow-lg border border-white/40" style="z-index: -1;"></div>
         {/* Badge */}
-        <div class="flex justify-center mb-6">
-          <span
-            class="inline-flex items-center px-4 py-2 bg-orange-100 text-orange-800 text-sm font-semibold rounded-full border border-orange-200"
-          >
+        <div class="flex justify-center mb-8">
+          <span class="inline-flex items-center px-5 py-2.5 bg-orange-100/80 backdrop-blur-sm text-orange-800 text-sm font-semibold rounded-full border border-orange-200/70 shadow-sm">
             🍊 Calidad Premium
           </span>
         </div>
 
         {/* Main heading with enhanced styling */}
-        <h1
-          class="text-center text-[clamp(2.5rem,1.5rem+4vw,5rem)] font-black leading-none bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500 bg-clip-text text-transparent mb-4"
-        >
+        <h1 class="text-center text-6xl font-black leading-none bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500 bg-clip-text text-transparent mb-5 drop-shadow-sm">
           Proceso de producción
         </h1>
 
         {/* Subtitle with better spacing */}
-        <h2
-          class="text-center text-2xl md:text-3xl font-bold leading-tight text-gray-800 mb-6"
-        >
+        <h2 class="text-center text-2xl md:text-3xl font-bold leading-tight text-gray-800 mb-8">
           Conoce el proceso de producción de nuestros jugos.
         </h2>
 
         {/* Description with improved typography */}
-        <p
-          class="text-center text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8"
-        >
-          Desde la llegada de las naranjas hasta el envío del producto final,
-          cada paso está diseñado para garantizar la
+        <p class="text-center text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed mb-10 px-4">
+          Desde la llegada de las naranjas hasta el envío del producto final, cada paso está diseñado para garantizar la
           <span class="font-semibold text-orange-600"> máxima calidad</span> y
           <span class="font-semibold text-orange-600"> frescura</span>.
         </p>
       </div>
     </div>
-    <div class="steps">
-      {
-        pasos.map((paso, index) => (
-          <div class={`level ${index % 2 === 0 ? "left" : "right"}`}>
-            <div
-              class={`steps-content ${index % 2 === 0 ? "slide-in-left" : "slide-in-right"}`}
-            >
-              <PasosProcess
-                nombre={paso.nombre}
-                imagen={paso.imagen}
-                texto={paso.texto}
-                client:visible
-              />
-            </div>
-            <div class="steps-count" data-index={index + 1} />
+    <div class="steps ">
+      {pasos.map((paso, index) => (
+        <div class={`level ${index % 2 === 0 ? "left" : "right"}`}>
+          <div class={`steps-content ${index % 2 === 0 ? "slide-in-left" : "slide-in-right"}`}>
+            <PasosProcess
+              nombre={paso.nombre}
+              imagen={paso.imagen}
+              texto={paso.texto}
+              client:visible
+            />
           </div>
-        ))
-      }
+          <div class="steps-count" data-index={index + 1}></div>
+        </div>
+      ))}
     </div>
   </div>
 </Layout>
-
+</Layout>
 <style>
   .wrapper {
     width: 100%;
@@ -270,7 +258,9 @@ const pasos = [
     display: flex;
     background-color: transparent;
     border-radius: 50%;
-    background-color: #00a35a;
+        background-color: #00a35a;
+        
+
   }
 
   .steps-content {

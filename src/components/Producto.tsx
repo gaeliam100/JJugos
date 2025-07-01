@@ -9,7 +9,7 @@ interface Props {
   caracteristica?: string; // Nueva propiedad para mostrar información adicional
   color: string; // clase para el fondo o tema del producto
   imagenProducto?: string;
-  frutas?: string[];
+  fondo: string; // Nueva propiedad para el fondo tipo cover
 }
 
 interface ProcutoProps {
@@ -36,48 +36,11 @@ export const ProductCard: React.FC<ProcutoProps> = ({ data }) => {
             base: "bg-gradient-to-br from-orange-50 via-white to-amber-50"
           }}
         >
-          {/* Frutas de fondo */}
-          <div className="absolute inset-0 z-0">
-            {data.frutas?.map((fruta, index) => (
-              <div
-                key={`bg-${index}`}
-                className="absolute opacity-1"
-                style={{
-                  left: `${Math.random() * 80}%`,
-                  top: `${Math.random() * 80}%`,
-                  transform: `rotate(${Math.random() * 360}deg) scale(${0.8 + Math.random() * 0.4})`,
-                  width: '60px',
-                  height: '60px'
-                }}
-              >
-                <Image 
-                  alt={`Fruta fondo ${index + 1}`} 
-                  className="object-cover w-full h-full" 
-                  src={fruta} 
-                />
-              </div>
-            ))}
-            {/* Duplicar algunas frutas para llenar más el fondo */}
-            {data.frutas?.slice(0, 2).map((fruta, index) => (
-              <div
-                key={`bg-extra-${index}`}
-                className="absolute opacity-5"
-                style={{
-                  right: `${Math.random() * 60}%`,
-                  bottom: `${Math.random() * 60}%`,
-                  transform: `rotate(${Math.random() * 360}deg) scale(${0.5 + Math.random() * 0.3})`,
-                  width: '40px',
-                  height: '40px'
-                }}
-              >
-                <Image 
-                  alt={`Fruta fondo extra ${index + 1}`} 
-                  className="object-cover w-full h-full" 
-                  src={fruta} 
-                />
-              </div>
-            ))}
-          </div>
+          {/* Fondo tipo cover */}
+          <div
+            className="absolute inset-0 z-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${data.fondo})` }}
+          ></div>
 
           {/* Gradiente sutil para mejor legibilidad */}
           <div className="absolute inset-0 z-1 bg-gradient-to-br from-white/20 via-transparent to-white/10"></div>

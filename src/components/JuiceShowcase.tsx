@@ -36,7 +36,7 @@ export const JuiceShowcase: React.FC = () => {
                       <span className="text-xs font-medium text-orange-600">Producto Estrella</span>
                     </div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                      Haz de JJugos el favorito de tus clientes
+                      Haz de JJ Jugos Naturales el favorito de tus clientes
                     </h3>
                     <p className="text-gray-600 mb-4">
                        Nuestros jugos 
@@ -67,7 +67,7 @@ export const JuiceShowcase: React.FC = () => {
                   </h3>
                   <p className="text-gray-600 mb-4">
                     ¿Quieres ser tu propio jefe mientras distribuyes un producto de
-                    alta calidad? Conviértete en distribuidor oficial de JJugos.
+                    alta calidad? Conviértete en distribuidor oficial de JJ Jugos Naturales.
                   </p>
                 </div>
                 <div className="relative h-full w-full">
@@ -93,14 +93,14 @@ export const JuiceShowcase: React.FC = () => {
                   </h3>
                   <p className="text-gray-600 mb-4">
                     Lleva nuestros jugos a nuevos mercados y crece junto con nosotros.
-                    Sé parte de la familia JJugos.
+                    Sé parte de la familia JJ Jugos Naturales.
                   </p>
                 </div>
                 <div className="relative h-full  w-full">
                   <img
                     className="h-full w-full object-cover rounded-b-xl"
                     src="/img/naturales_de_calidad_premium/2.png"
-                    alt="Únete al equipo de JJugos"
+                    alt="Únete al equipo de JJ Jugos Naturales"
                   />
                 </div>
               </CardBody>
@@ -156,7 +156,7 @@ export const JuiceShowcase: React.FC = () => {
                   <img
                     className="h-full w-full object-contain md:object-cover md:rounded-r-xl"
                     src="/img/naturales_de_calidad_premium/3.png"
-                    alt="La pasión detrás de JJugos"
+                    alt="La pasión detrás de JJugJJ Jugos Naturalesos"
                   />
                 </div>
               </div>

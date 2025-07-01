@@ -41,7 +41,7 @@ export default function Footer() {
         <Spacer y={6} />
 
         <p className="mt-1 text-center text-small text-default-400">
-          &copy; {currentYear} JJUGOS. Todos los derechos reservados.
+          &copy; {currentYear} JJ Jugos Naturales. Todos los derechos reservados.
         </p>
       </div>
     </footer>

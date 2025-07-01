@@ -7,11 +7,7 @@
       "caracteristica": "Contiene vitamina C, fibra y minerales que cuidan tu sistema inmunológico.",
       "color": "orange",
       "imagenProducto": "/img/Botellas/NARANJA.png",
-      "frutas": [
-        "/img/Frutas/NARANJA.png",
-        "/img/Frutas/NARANJA_2.png",
-        "/img/Frutas/NARANJA_3.png"
-      ]
+      "fondo": "/img/Fondos/ARBOL_DE_NARANJA.png"
     },
     {
       "nombre": "Jugo de Toronja",
@@ -20,11 +16,7 @@
       "caracteristica": "Rica en vitamina C, antioxidante, minerales, fibra y reduce el colesterol.",
       "color": "red",
       "imagenProducto": "/img/Botellas/TORONJA.png",
-      "frutas": [
-        "/img/Frutas/TORONJA.png",
-        "/img/Frutas/TORONJA_2.png",
-        "/img/Frutas/TORONJA_3.png"
-      ]
+      "fondo": "/img/Fondos/ARBOL_DE_TORONJA.png"
     },
     {
       "nombre": "Jugo de Limón",
@@ -33,11 +25,7 @@
       "descripcion": "Perfecto para preparar bebidas o disfrutar solo, nuestro jugo de limón es 100% natural y puro, elaborado con frutas de la más alta calidad.",
       "caracteristica": "Rico en vitamina C, antioxidante, fortalece sistema inmunológico.",
       "color": "green",
-      "frutas": [
-        "/img/Frutas/LIMON_1.png",
-        "/img/Frutas/LIMON_2.png",
-        "/img/Frutas/LIMON_3.png"
-      ]
+      "fondo": "/img/Fondos/ARBOL_DE_LIMON.png"
     },
     {
       "nombre": "Jugo de Mandarina",
@@ -46,11 +34,7 @@
       "descripcion": "Solo por tiempo limitado, disfruta del sabor dulce y vibrante del jugo de mandarina, elaborado con frutas frescas y sin ningún aditivo. Perfecto para refrescar tus días.",
       "caracteristica": "Contiene vitamina C, antioxidantes, fibra, fortalece sistema inmunológico.",
       "color": "orange",
-      "frutas": [
-        "/img/Frutas/MANDARINA_1.png",
-        "/img/Frutas/MANDARINA_2.png",
-        "/img/Frutas/MANDARINA_3.png"
-      ]
+      "fondo": "/img/Fondos/ARBOL_DE_MANDARINA.png"
     },
 
     {
@@ -60,11 +44,7 @@
       "descripcion": "Nuestro jugo de zanahoria es la opción ideal para quienes buscan salud y sabor en un solo vaso. Natural, sin conservadores y lleno de vitaminas.",
       "caracteristica": "Ayuda a la salud ocular rico en vitaminas ayuda la prevención de la aparición de cataratas, degeneración macular y enfermedades crónicas.",
       "color": "orange",
-      "frutas": [
-        "/img/Frutas/ZANAHORIA.png",
-        "/img/Frutas/ZANAHORIA_2.png",
-        "/img/Frutas/ZANAHORIA_3.png"
-      ]
+      "fondo": "/img/Fondos/ZANAHORIA.png"
     }
   ],
   "mixes_de_frutas": [
@@ -75,10 +55,7 @@
       "descripcion": "El equilibrio perfecto entre el sabor dulce del mango y la frescura de la naranja. Este mix es ideal para revitalizar tus días.",
       "caracteristica": "Fuente rica en vitamina C, potasio, fibra, antioxidantes combate el estreñimiento, reduce la aparición de arrugas.",
       "color": "red",
-      "frutas": [
-        "/img/Frutas/NARANJA_MANGO.png",
-        "/img/Frutas/NARANJA_MANGO_2.png"
-      ]
+      "fondo": "/img/Fondos/ARBOL_DE_MANGO.png"
     },
     {
       "nombre": "Naranja Guayaba",
@@ -87,10 +64,7 @@
       "descripcion": "La combinación de naranja y guayaba ofrece un mix lleno de nutrientes y sabor auténtico, ideal para disfrutar en cualquier momento.",
       "caracteristica": "Rico en vitamina C, mejora la digestión y la presión arterial.",
       "color": "red",
-      "frutas": [
-        "/img/Frutas/NARANJA_GUAYABA.png",
-        "/img/Frutas/NARANJA_GUAYABA_2.png"
-      ]
+      "fondo": "/img/Fondos/ARBOL_DE_GUAYABA.png"
     },
     {
       "nombre": "Naranja Frutos Rojos",
@@ -99,10 +73,7 @@
       "descripcion": "Una mezcla vibrante de naranja y frutos rojos, perfecta para quienes buscan frescura y un boost saludable.",
       "caracteristica": "Antioxidante con Vitamina C y K fibra y minerales.",
       "color": "red",
-      "frutas": [
-        "/img/Frutas/NARANJA_FRUTOS_ROJOS.png",
-        "/img/Frutas/NARANJA_FRUTOS_ROJOS_2.png"
-      ]
+      "fondo": "/img/Fondos/FRUTOS_ROJOS.png"
     },
     {
       "nombre": "Naranja con Base Verde",
@@ -111,8 +82,7 @@
       "descripcion": "Una combinación única de naranja con ingredientes verdes que revitalizan tu cuerpo y mente. Ideal para quienes buscan bienestar natural.",
       "caracteristica": "Rico en antioxidantes, vitaminas minerales y fibras.",
       "color": "red",
-      "frutas": ["/img/Frutas/JUGO_VERDE.png"]
-
+      "fondo": "/img/Fondos/JUGO_VERDE.png"
     }
   ],
   "bebidas_de_sabores": [
@@ -122,7 +92,8 @@
       "imagenProducto": "/img/Botellas/MANZANA.png",
       "descripcion": "Nuestra bebida de manzana es una opción ligera, refrescante y natural para disfrutar en cualquier ocasión.",
       "caracteristica": "Mejora la digestión, ayuda a la regulación de azúcar en sangre.",
-      "color": "red"
+      "color": "red",
+      "fondo": "/img/Fondos/BEBIDA_MANZANA.png"
     },
     {
       "nombre": "Mango",
@@ -130,7 +101,8 @@
       "imagenProducto": "/img/Botellas/MANGO.png",
       "descripcion": "La bebida de mango destaca por su dulzura y frescura, una opción que evoca lo mejor del trópico.",
       "caracteristica": "Rico en nutrientes, vitaminas A y C , fibra, potasio, magnesio, antioxidantes y el envejecimiento prematuro.",
-      "color": "red"
+      "color": "red",
+      "fondo": "/img/Fondos/ARBOL_DE_MANGO.png"
     },
     {
       "nombre": "Durazno",
@@ -138,15 +110,17 @@
       "imagenProducto": "/img/Botellas/DURAZNO.png",
       "descripcion": "La bebida de durazno de JJ Jugos es perfecta para quienes buscan una opción dulce y refrescante para cualquier momento del día.",
       "caracteristica": "Fortalece al sistema inmunológico, mejora la salud de tu piel y la digestión.",
-      "color": "red"
+      "color": "red",
+      "fondo": "/img/Fondos/BEBIDA_DURAZNO.png"
     },
     {
       "nombre": "Guayaba",
       "titulo": "El Sabor de la Tradición Mexicana 🍐",
-      "imagenProducto": "/img/Botellas/NARANJA_GUAYABA.png",
+      "imagenProducto": "/img/Botellas/GUAYABA.png",
       "descripcion": "Elaborada con guayabas frescas, esta bebida es una mezcla de dulzura y frescura, ideal para disfrutar sola o en compañía.",
       "caracteristica": "Rica en vitamina C, antioxidantes, contiene fibra, Vitamina A, E, D12, potasio, calcio, hierro, potasio, fosforo. Controla los niveles de azúcar en la sangre.",
-      "color": "red"
+      "color": "red",
+      "fondo": "/img/Fondos/ARBOL_DE_GUAYABA.png"
     },
     {
       "nombre": "Piña",
@@ -154,7 +128,8 @@
       "imagenProducto": "/img/Botellas/PINA.png",
       "descripcion": "La bebida de piña 100% natural es perfecta para refrescarte en cualquier momento, con un toque tropical irresistible.",
       "caracteristica": "Rica en vitamina C, propiedades antiinflamatorias, contiene potasio, magnesio y fibra. Contribuye a la salud ocular y cardiovascular.",
-      "color": "red"
+      "color": "red",
+      "fondo": "/img/Fondos/BEBIDA_PINA.png"
     },
     {
       "nombre": "Maracuyá",
@@ -162,7 +137,8 @@
       "imagenProducto": "/img/Botellas/MARACUYA.png",
       "descripcion": "Descubre el sabor único y tropical de la bebida de maracuyá, una opción refrescante y diferente.",
       "caracteristica": "Rica en antioxidantes, regula la presión arterial protege el corazón.",
-      "color": "red"
+      "color": "red",
+      "fondo": "/img/Fondos/BEBIDA_MARACUYA.png"
     },
     {
       "nombre": "Fresa",
@@ -170,7 +146,8 @@
       "imagenProducto": "/img/Botellas/FRESA.png",
       "descripcion": "La bebida de fresa de JJ Jugos es una delicia dulce y refrescante, ideal para niños y adultos.",
       "caracteristica": "Rica en vitamina C, fibra, ácido fólico, antioxidantes y combate el estreñimiento, regula los niveles de colesterol y azúcar en la sangre.",
-      "color": "red"
+      "color": "red",
+      "fondo": "/img/Fondos/BEBIDA_FRESA.png"
     },
     {
       "nombre": "Tamarindo",
@@ -178,7 +155,8 @@
       "imagenProducto": "/img/Botellas/TAMARINDO.png",
       "descripcion": "La bebida de tamarindo es una opción refrescante y auténtica, con el equilibrio perfecto entre dulzura y acidez.",
       "caracteristica": "Rico en vitamina B, C, E, A, calcio, hierro, potasio, magnesio, zinc y fosforo. Reduce los riesgos de enfermedades crónicas.",
-      "color": "red"
+      "color": "red",
+      "fondo": "/img/Fondos/BEBIDA_TAMARINDO.png"
     }
   ]
 }
