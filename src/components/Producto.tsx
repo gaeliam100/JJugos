@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import type React from "react";
 import { Button, Card, CardBody, CardFooter, CardHeader, Chip, Image } from "@heroui/react";
 import { motion } from "framer-motion";
@@ -17,6 +18,17 @@ interface ProcutoProps {
 }
 
 export const ProductCard: React.FC<ProcutoProps> = ({ data }) => {
+  const [isModalVisible, setModalVisible] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true); // Indica que estamos en el cliente
+  }, []);
+
+  const toggleModal = () => {
+    setModalVisible(!isModalVisible);
+  };
+
   return (
     <>
       <motion.div
@@ -28,6 +40,7 @@ export const ProductCard: React.FC<ProcutoProps> = ({ data }) => {
           initial: { scale: 1, rotate: 0 },
           hover: { scale: 1.03, rotate: -1 }
         }}
+        onClick={toggleModal} // Agregar evento onClick para dispositivos móviles
       >
         <Card
           isFooterBlurred
@@ -62,23 +75,25 @@ export const ProductCard: React.FC<ProcutoProps> = ({ data }) => {
             src={data.imagenProducto || "https://i.pinimg.com/originals/28/3e/53/283e53880ea4fd483c4968d89b143866.png"}
           />
 
-          {/* Modal informativo en hover */}
-          <motion.div 
-            className="absolute inset-0 z-20 flex items-center justify-center"
-            variants={{
-              initial: { opacity: 0, scale: 0.8 },
-              hover: { opacity: 1, scale: 1 }
-            }}
-            transition={{ type: "spring", stiffness: 300, damping: 25 }}
-          >
-            <div className="bg-white/95 backdrop-blur-md rounded-2xl p-6 mx-4 shadow-xl border border-white/20 max-w-sm">
-              <h4 className="text-gray-800 text-lg font-bold mb-3 text-center">{data.titulo}</h4>
-              <p className="text-gray-600 text-sm text-center leading-relaxed">{data.descripcion}</p>
-              {data.caracteristica && (
-                <p className="text-orange-600 text-sm text-center leading-relaxed mt-4">{data.caracteristica}</p>
-              )}
-            </div>
-          </motion.div>
+          {/* Modal informativo */}
+          {(isModalVisible || (isClient && window.matchMedia("(hover: hover)").matches)) && (
+            <motion.div 
+              className="absolute inset-0 z-20 flex items-center justify-center"
+              variants={{
+                initial: { opacity: 0, scale: 0.8 },
+                hover: { opacity: 1, scale: 1 }
+              }}
+              transition={{ type: "spring", stiffness: 300, damping: 25 }}
+            >
+              <div className="bg-white/95 backdrop-blur-md rounded-2xl p-6 mx-4 shadow-xl border border-white/20 max-w-sm">
+                <h4 className="text-gray-800 text-lg font-bold mb-3 text-center">{data.titulo}</h4>
+                <p className="text-gray-600 text-sm text-center leading-relaxed">{data.descripcion}</p>
+                {data.caracteristica && (
+                  <p className="text-orange-600 text-sm text-center leading-relaxed mt-4">{data.caracteristica}</p>
+                )}
+              </div>
+            </motion.div>
+          )}
         </Card>
       </motion.div>
     </>
