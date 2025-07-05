@@ -36,15 +36,14 @@
       "color": "orange",
       "fondo": "/img/Fondos/ARBOL_DE_MANDARINA.png"
     },
-
-    {
-      "nombre": "Jugo de Zanahoria",
-      "titulo": "Nutrientes y Frescura en Cada Gota 🥕",
-      "imagenProducto": "/img/Botellas/ZHANAORIA.png",
-      "descripcion": "Nuestro jugo de zanahoria es la opción ideal para quienes buscan salud y sabor en un solo vaso. Natural, sin conservadores y lleno de vitaminas.",
-      "caracteristica": "Ayuda a la salud ocular rico en vitaminas ayuda la prevención de la aparición de cataratas, degeneración macular y enfermedades crónicas.",
+        {
+      "nombre": "Jugo Verde",
+      "titulo": "Sabor Saludable y Refrescante 🍍🌱",
+      "imagenProducto": "/img/Botellas/VERDE.png",
+      "descripcion": "Una combinación única de naranja con ingredientes verdes que revitalizan tu cuerpo y mente. Ideal para quienes buscan bienestar natural.",
+      "caracteristica": "Rico en antioxidantes, vitaminas minerales y fibras.",
       "color": "orange",
-      "fondo": "/img/Fondos/ZANAHORIA.png"
+      "fondo": "/img/Fondos/JUGO_VERDE.png"
     }
   ],
   "mixes_de_frutas": [
@@ -74,15 +73,6 @@
       "caracteristica": "Antioxidante con Vitamina C y K fibra y minerales.",
       "color": "red",
       "fondo": "/img/Fondos/FRUTOS_ROJOS.png"
-    },
-    {
-      "nombre": "Naranja con Base Verde",
-      "titulo": "Sabor Saludable y Refrescante 🍍🌱",
-      "imagenProducto": "/img/Botellas/VERDE.png",
-      "descripcion": "Una combinación única de naranja con ingredientes verdes que revitalizan tu cuerpo y mente. Ideal para quienes buscan bienestar natural.",
-      "caracteristica": "Rico en antioxidantes, vitaminas minerales y fibras.",
-      "color": "red",
-      "fondo": "/img/Fondos/JUGO_VERDE.png"
     }
   ],
   "bebidas_de_sabores": [
